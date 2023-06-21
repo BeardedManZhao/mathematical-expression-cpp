@@ -35,7 +35,9 @@ namespace ME {
          * <p>
          * The result is calculated by the calculation component. You can query the name of the component that calculates the result here. Note that the name returned here will not change with the change of the registry in the administrator
          *
-         * @return 计算结果的来源
+         * @return 计算结果的来源，一般情况下，如果设置了别名，此函数将返回别名数据。
+         *
+         * The source of the calculation result. Generally, if an alias is set, this function will return the alias data.
          */
         virtual string getCalculationSourceName() = 0;
 
@@ -68,6 +70,7 @@ namespace ME {
         const double result;
         const int result_layers;
         const string source;
+        string alias;
 
     public:
         /**
@@ -88,6 +91,21 @@ namespace ME {
         int getResultLayers() override;
 
         string getCalculationSourceName() override;
+
+        /**
+         * 为结果对象起别名。
+         *
+         * Create an alias for the result object.
+         * @param name 指定的新别名，此操作将会使得结果对象的源名称成为别名。
+         *
+         * Specify a new alias, which will make the source name of the result object an alias.
+         */
+        void as(const string &name);
+
+        /**
+         * clear alias
+         */
+        void clearAs();
 
         /**
          * 从结果数据对象中提取出指定的数据
@@ -142,6 +160,7 @@ namespace ME {
     private:
         const bool result;
         const string source;
+        string alias;
         const int Layers;
         const double left;
         const double right;
@@ -164,6 +183,21 @@ namespace ME {
         int getResultLayers() override;
 
         string getCalculationSourceName() override;
+
+        /**
+         * 为结果对象起别名。
+         *
+         * Create an alias for the result object.
+         * @param name 指定的新别名，此操作将会使得结果对象的源名称成为别名。
+         *
+         * Specify a new alias, which will make the source name of the result object an alias.
+         */
+        void as(const string &name);
+
+        /**
+         * clear alias
+         */
+        void clearAs();
 
         /**
          * 从结果数据对象中提取出指定的数据

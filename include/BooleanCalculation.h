@@ -4,10 +4,12 @@
 
 #ifndef MATHEMATICAL_EXPRESSION_CPP_BOOLEANCALCULATION_H
 #define MATHEMATICAL_EXPRESSION_CPP_BOOLEANCALCULATION_H
+
 #include "Calculation.h"
 #include "CalculationResults.h"
+
 namespace ME {
-    class BooleanCalculation : public Calculation{
+    class BooleanCalculation : public Calculation {
     public:
         std::string formatStr(std::string string) override;
 

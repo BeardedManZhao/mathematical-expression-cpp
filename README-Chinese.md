@@ -180,6 +180,151 @@ Active code page: 65001
 进程已结束,退出代码0
 ```
 
+## C++API 特性
+
+在 C++ 中，库具有更快的解析与计算速度，同时其具有更加庞大的功能，接下来针对C++中的特有功能来进行一个说明。
+
+### 操作数之间的计算操作
+
+通过计算组件计算出来的结果对象，其还具有运算功能，可以基于此方式来进行多个操作数之间的计算操作，接下来就是一个示例。
+
+```
+#include <mathematical_expression.h>
+
+int main() {
+    // 准备数学表达式对象
+    mathematical_expression me;
+    // 打印出数学表达式库的版本号
+    std::cout << mathematical_expression::getVERSION() << endl;
+    // 准备要被计算的数学表达式
+    std::string f = "1 + (3 - 2) + 10";
+    // 准备计算组件
+    ME::BracketsCalculationTwo bracketsCalculationTwo = me.getBracketsCalculation2();
+
+    // 开始进行计算
+    ME::CalculationNumberResults res1 = bracketsCalculationTwo << f;
+    // 使用结果对象进行计算
+    ME::CalculationNumberResults res2 = res1 + res1;
+    std::cout << "res1 + res1 = " << res2 << "\t其结果的源 = " << res2.getCalculationSourceName() << endl;
+}
+```
+
+- 运行结果
+
+```
+#include <mathematical_expression.h>
+
+int main() {
+    system("chcp 65001");
+    // 准备数学表达式对象
+    mathematical_expression me;
+    // 打印出数学表达式库的版本号
+    std::cout << mathematical_expression::getVERSION() << endl;
+    // 准备要被计算的数学表达式
+    std::string f = "1 + (3 - 2) + 10";
+    // 准备计算组件
+    ME::BracketsCalculationTwo bracketsCalculationTwo = me.getBracketsCalculation2();
+
+    // 开始进行计算
+    ME::CalculationNumberResults res1 = bracketsCalculationTwo << f;
+    // 使用结果对象进行计算
+    ME::CalculationNumberResults res2 = res1 + res1;
+    std::cout << "res1 + res1 = " << res2 << "\t其结果的源 = " << res2.getCalculationSourceName() << endl;
+}
+```
+
+### 操作数中的别名操作
+
+在经过计算组件计算之后，操作数中包含计算组件的类型名称，但是在C++中，由于有了操作数之间的计算特性，源名称就显得很混乱，因此可以使用下面的操作起别名称，这样就可以达到良好的效果。
+
+接下来是一个有关别名操作的基本示例
+
+```c++
+#include <mathematical_expression.h>
+
+int main() {
+    // 准备数学表达式对象
+    mathematical_expression me;
+    // 打印出数学表达式库的版本号
+    std::cout << mathematical_expression::getVERSION() << endl;
+    // 准备要被计算的数学表达式
+    std::string f = "1 + (3 - 2) + 10";
+    // 准备计算组件
+    ME::BracketsCalculationTwo bracketsCalculationTwo = me.getBracketsCalculation2();
+
+    // 开始进行计算
+    ME::CalculationNumberResults res1 = bracketsCalculationTwo << f;
+    // 打印出结果对象的源名称
+    std::cout << res1.getCalculationSourceName() << endl;
+    // 为 res1 设置别名
+    res1.as("res1");
+    // 再一次打印出结果对象的源名称
+    std::cout << res1.getCalculationSourceName() << endl;
+}
+```
+
+- 运行结果
+
+```
+1.0.0-mathematical_expression-C++
+BracketsCalculation
+res1
+
+进程已结束,退出代码0
+
+```
+
+接下来是一个有关别名操作的有趣案例（操作数之间的计算 + 别名）
+
+```c++
+#include <mathematical_expression.h>
+
+int main() {
+    // 准备数学表达式对象
+    mathematical_expression me;
+    // 打印出数学表达式库的版本号
+    std::cout << mathematical_expression::getVERSION() << endl;
+    // 准备要被计算的数学表达式
+    std::string f = "1 + (3 - 2) + 10";
+    // 准备计算组件
+    ME::BracketsCalculationTwo bracketsCalculationTwo = me.getBracketsCalculation2();
+
+    // 开始进行计算
+    ME::CalculationNumberResults res1 = bracketsCalculationTwo << f;
+    // 为 res1 设置别名
+    res1.as("res1");
+    std::cout << res1 << endl;
+
+    // 计算出 res2
+    ME::CalculationNumberResults res2 = res1 + res1;
+    // 为 res2 设置别名
+    res2.as("res2");
+    std::cout << res2 << endl;
+    std::cout << res2.getCalculationSourceName() << endl;
+
+    // 计算出 res3 在这里使用结果对象之间的运算操作，res3 = res2 - res1
+    ME::CalculationNumberResults res3 = res2 - res1;
+    std::cout << '[' << res3  << ']' << '\t' << res3.getCalculationSourceName() << endl;
+
+    // 计算出 res4 在这里使用结果对象之间的运算操作，res4 = res3 * res1 = (res2 - res1) * res1
+    ME::CalculationNumberResults res4 = res3 * res1;
+    std::cout  << '[' << res4 << ']' << '\t' << res4.getCalculationSourceName() << endl;
+}
+```
+
+- 运行结果
+
+```
+1.0.0-mathematical_expression-C++
+12
+24
+res2
+[12]    (res2 - res1)
+[144]   ((res2 - res1) * res1)
+
+进程已结束,退出代码0
+```
+
 <hr>
 
 更多信息

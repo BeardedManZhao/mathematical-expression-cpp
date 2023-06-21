@@ -3,6 +3,7 @@
 //
 
 #include "CalculationResults.h"
+#include "ConstantRegion.h"
 
 #include <utility>
 
@@ -13,7 +14,7 @@ namespace ME {
     }
 
     string CalculationBooleanResults::getCalculationSourceName() {
-        return this->source;
+        return this->alias == NO_CHAR ? this->source : this->alias;
     }
 
     double CalculationBooleanResults::getResult_double() const {
@@ -30,7 +31,9 @@ namespace ME {
                                                                                                           source)),
                                                                                                   Layers(layers),
                                                                                                   left(left),
-                                                                                                  right(right) {}
+                                                                                                  right(right) {
+        this->clearAs();
+    }
 
     double CalculationBooleanResults::getLeft() const {
         return this->left;
@@ -53,6 +56,14 @@ namespace ME {
                std::hash<double>{}(person.left) ^ std::hash<double>{}(person.right);
     }
 
+    void CalculationBooleanResults::as(const string &name) {
+        this->alias = name;
+    }
+
+    void CalculationBooleanResults::clearAs() {
+        this->alias = NO_CHAR;
+    }
+
     CalculationBooleanResults::~CalculationBooleanResults() = default;
 
     // ******************************************************
@@ -63,7 +74,7 @@ namespace ME {
     }
 
     string CalculationNumberResults::getCalculationSourceName() {
-        return this->source;
+        return this->alias == NO_CHAR ? this->source : this->alias;
     }
 
     double CalculationNumberResults::getResult_double() const {
@@ -96,6 +107,7 @@ namespace ME {
 
     CalculationNumberResults::CalculationNumberResults(const int result_layers, const double result, string source) :
             result_layers(result_layers), result(result), source(std::move(source)) {
+        this->clearAs();
     }
 
     size_t CalculationNumberResults::operator()(const CalculationNumberResults &person) const {
@@ -105,6 +117,14 @@ namespace ME {
 
     double CalculationNumberResults::getResult() const {
         return this->getResult_double();
+    }
+
+    void CalculationNumberResults::as(const string &name) {
+        this->alias = name;
+    }
+
+    void CalculationNumberResults::clearAs() {
+        this->alias = NO_CHAR;
     }
 
     CalculationNumberResults::~CalculationNumberResults() = default;
@@ -118,8 +138,8 @@ namespace ME {
         return {
                 v1.getResultLayers() + v2.getResultLayers(),
                 v1.getResult_double() + v2.getResult_double(),
-                "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
-                v2.getCalculationSourceName() + ')'
+                "(" + v1.getCalculationSourceName() + " + " +
+                v2.getCalculationSourceName() + ")"
         };
     }
 
@@ -127,8 +147,8 @@ namespace ME {
         return {
                 v1.getResultLayers() + v2.getResultLayers(),
                 v1.getResult_double() - v2.getResult_double(),
-                "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
-                v2.getCalculationSourceName() + ')'
+                "(" + v1.getCalculationSourceName() + " - " +
+                v2.getCalculationSourceName() + ")"
         };
     }
 
@@ -136,8 +156,8 @@ namespace ME {
         return {
                 v1.getResultLayers() + v2.getResultLayers(),
                 v1.getResult_double() * v2.getResult_double(),
-                "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
-                v2.getCalculationSourceName() + ')'
+                "(" + v1.getCalculationSourceName() + " * " +
+                v2.getCalculationSourceName() + ")"
         };
     }
 
@@ -145,8 +165,8 @@ namespace ME {
         return {
                 v1.getResultLayers() + v2.getResultLayers(),
                 v1.getResult_double() / v2.getResult_double(),
-                "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
-                v2.getCalculationSourceName() + ')'
+                "(" + v1.getCalculationSourceName() + " / " +
+                v2.getCalculationSourceName() + ")"
         };
     }
 
@@ -154,8 +174,8 @@ namespace ME {
         return {
                 v1.getResultLayers() + v2.getResultLayers(),
                 v1.getResult_double() + v2.getResult_double(),
-                "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
-                v2.getCalculationSourceName() + ')'
+                "(" + v1.getCalculationSourceName() + " << " +
+                v2.getCalculationSourceName() + ")"
         };
     }
 
@@ -163,8 +183,8 @@ namespace ME {
         return {
                 v1.getResultLayers() + v2.getResultLayers(),
                 v1.getResult_double() + v2.getResult_double(),
-                "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
-                v2.getCalculationSourceName() + ')'
+                "(" + v1.getCalculationSourceName() + " >> " +
+                v2.getCalculationSourceName() + ")"
         };
     }
 }

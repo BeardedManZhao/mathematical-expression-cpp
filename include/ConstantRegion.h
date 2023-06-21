@@ -52,6 +52,6 @@ const std::string LOG_INFO_SHARED_POOL = "Use shared pool data. The identity of 
 
 namespace ME {
     static const std::regex ALL_INVISIBLE_CHARACTERS_PATTERN = std::regex("\\s+");
-    static const std::regex REGULAR_COMPARISON_OPERATOR_PATTERN = std::regex(ConstantRegion.REGULAR_COMPARISON_OPERATOR);
+    static const std::regex REGULAR_COMPARISON_OPERATOR_PATTERN = std::regex(REGULAR_COMPARISON_OPERATOR);
 }
 #endif //MATHEMATICAL_EXPRESSION_CPP_CONSTANTREGION_H

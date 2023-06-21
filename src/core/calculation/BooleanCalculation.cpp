@@ -15,7 +15,8 @@ std::string ME::BooleanCalculation::formatStr(std::string string) {
 
 void ME::BooleanCalculation::check(std::string string) {
     // 先按照表达式的比较运算符进行一个切分
-    std::regex_iterator<std::string::iterator> rit(string.begin(), string.end(), ME::REGULAR_COMPARISON_OPERATOR_PATTERN);
+    std::regex_iterator<std::string::iterator> rit(string.begin(), string.end(),
+                                                   ME::REGULAR_COMPARISON_OPERATOR_PATTERN);
     std::regex_iterator<std::string::iterator> rend;
     // 判断是否属于布尔表达式，使用切分之后是否有两个表达式判断
     unsigned int length = rit->size();
