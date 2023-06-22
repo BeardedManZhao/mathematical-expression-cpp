@@ -10,3 +10,7 @@ ME::PrefixExpressionOperation mathematical_expression::getPrefixExpressionOperat
 ME::BracketsCalculationTwo mathematical_expression::getBracketsCalculation2() {
     return mathematical_expression::bracketsCalculation2;
 }
+
+ME::BooleanCalculationTwo mathematical_expression::getBooleanCalculation2() {
+    return mathematical_expression::booleanCalculation2;
+}

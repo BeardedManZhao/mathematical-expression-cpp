@@ -47,11 +47,11 @@ const std::string LOG_INFO_FIND_FUNCTION = "Find and prepare the startup functio
 const std::string LOG_INFO_REGISTER_COMPONENT = "A computing component is registered ";
 const std::string LOG_INFO_register_FUNCTION = "A function is registered ";
 const std::string LOG_INFO_UNREGISTER_COMPONENT = "Preparing to unregister the compute component. Component name:";
-const std::string LOG_INFO_UNREGISTER_FUNCTION = "Prepare the logoff of a function. Function name:";
+const std::string LOG_INFO_UNREGISTER_FUNCTION = "Prepare the logoff of a function. FunctionManager name:";
 const std::string LOG_INFO_SHARED_POOL = "Use shared pool data. The identity of the data is: ";
 
 namespace ME {
-    static const std::regex ALL_INVISIBLE_CHARACTERS_PATTERN = std::regex("\\s+");
-    static const std::regex REGULAR_COMPARISON_OPERATOR_PATTERN = std::regex(REGULAR_COMPARISON_OPERATOR);
+    static const std::regex ALL_INVISIBLE_CHARACTERS_PATTERN("\\s+");
+    static const std::regex REGULAR_COMPARISON_OPERATOR_PATTERN(REGULAR_COMPARISON_OPERATOR);
 }
 #endif //MATHEMATICAL_EXPRESSION_CPP_CONSTANTREGION_H

@@ -15,14 +15,20 @@ std::string ME::BooleanCalculation::formatStr(std::string string) {
 
 void ME::BooleanCalculation::check(std::string string) {
     // 先按照表达式的比较运算符进行一个切分
-    std::regex_iterator<std::string::iterator> rit(string.begin(), string.end(),
-                                                   ME::REGULAR_COMPARISON_OPERATOR_PATTERN);
-    std::regex_iterator<std::string::iterator> rend;
+    std::sregex_token_iterator rit(string.begin(), string.end(),
+                                   ME::REGULAR_COMPARISON_OPERATOR_PATTERN, -1);
+    std::sregex_token_iterator rend;
+    std::vector<std::string> res;
+    // 存储进vector
+    while (rit != rend) {
+        std::string r = rit++->str();
+        res.push_back(r);
+    }
     // 判断是否属于布尔表达式，使用切分之后是否有两个表达式判断
-    unsigned int length = rit->size();
+    unsigned int length = res.size();
     if (length == 2) {
         // 检查表达式两边是否符合条件
-        std::string left = rit->str(), right = rit++->str();
+        std::string left = res[0], right = res[1];
         if (!std::equal(STRING_NULL.begin(), STRING_NULL.end(), left.begin())) {
             BRACKETS_CALCULATION_2.check(left);
         }

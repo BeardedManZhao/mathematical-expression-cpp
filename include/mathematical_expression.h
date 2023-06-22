@@ -7,8 +7,9 @@
 
 #include "PrefixExpressionOperation.h"
 #include "BracketsCalculationTwo.h"
+#include "BooleanCalculationTwo.h"
 
-#define VERSION "1.0.0-mathematical_expression-C++";
+#define VERSION "1.0.1-mathematical_expression-C++";
 
 /**
  * 数学表达式解析计算库中的门户类，由该类获取到数学表达式计算库中的相关数据对象。
@@ -19,6 +20,7 @@ class mathematical_expression {
 protected:
     ME::PrefixExpressionOperation prefixExpressionOperation;
     ME::BracketsCalculationTwo bracketsCalculation2;
+    ME::BooleanCalculationTwo booleanCalculation2;
 public:
 
     /**
@@ -46,6 +48,14 @@ public:
      * Mathematical expression calculation component, which can parse and evaluate an expression with parentheses.
      */
     ME::BracketsCalculationTwo getBracketsCalculation2();
+
+    /**
+     *
+     * @return 比较运算数学表达式计算组件，该组件能够解析并计算一个不等或等式是否成立。
+     *
+     * Compare the Computational mathematics expression calculation component, which can analyze and calculate whether an inequality or equality is true.
+     */
+    ME::BooleanCalculationTwo getBooleanCalculation2();
 };
 
 

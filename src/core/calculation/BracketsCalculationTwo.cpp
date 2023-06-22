@@ -13,7 +13,7 @@ ME::CalculationNumberResults ME::BracketsCalculationTwo::calculation(std::string
     std::string stringBuilder;
     // 括号内数据的起始索引
     int start = 0;
-    bool setok = false;
+    bool setOk = false;
     int layer = 0;
     // 括号内的括号均衡数量，为了确定是一对括号
     int count = 0;
@@ -21,20 +21,20 @@ ME::CalculationNumberResults ME::BracketsCalculationTwo::calculation(std::string
         char aChar = Formula[i];
         if (aChar == LEFT_BRACKET) {
             // 如果当前字符是一个左括号，那么说明括号开始了，这个时候需要将起始点记录
-            if (!setok) {
-                setok = true;
+            if (!setOk) {
+                setOk = true;
                 start = i + 1;
             }
             ++count;
         } else if (aChar == RIGHT_BRACKET && --count == 0) {
-            setok = false;
+            setOk = false;
             // 如果当前字符是一个右括号，那么就将括号中的字符进行递归计算，计算之后将该参数作为公式的一部分
             CalculationNumberResults calculation = operation.calculation(
                     Formula.substr(start, i - start + 1), formatRequired
             );
             stringBuilder.append(to_string(calculation.getResult()));
             ++layer;
-        } else if (!setok && aChar != EMPTY) {
+        } else if (!setOk && aChar != EMPTY) {
             // 如果不是一个括号就将字符提供给字符串缓冲区
             stringBuilder += aChar;
         }

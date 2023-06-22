@@ -6,6 +6,7 @@
 #define MATHEMATICAL_EXPRESSION_CPP_UTILS_H
 
 #include <string>
+#include "MExceptional.h"
 
 namespace StrUtils {
 
@@ -77,8 +78,19 @@ namespace NumberUtils {
      * @param bn              运算数值2
      * @return 运算结果
      */
-
     double calculation(char CalculationType, double an, double bn);
+
+    /**
+     * 将两个数值进行比较
+     *
+     * @param ComparisonOperator 两个数值的比较运算符
+     * @param left               左值
+     * @param right              右值
+     * @return 左值 与 右值 之间是否符合比较运算符的关系
+     * <p>
+     * Whether the left value and right value conform to the comparison operator
+     */
+    bool ComparisonOperation(const std::string &ComparisonOperator, double left, double right);
 }
 
 #endif //MATHEMATICAL_EXPRESSION_CPP_UTILS_H

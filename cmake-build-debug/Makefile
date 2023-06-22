@@ -152,6 +152,30 @@ src/core/calculation/BooleanCalculation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.s
 .PHONY : src/core/calculation/BooleanCalculation.cpp.s
 
+src/core/calculation/BooleanCalculationTwo.obj: src/core/calculation/BooleanCalculationTwo.cpp.obj
+.PHONY : src/core/calculation/BooleanCalculationTwo.obj
+
+# target to build an object file
+src/core/calculation/BooleanCalculationTwo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculationTwo.cpp.obj
+.PHONY : src/core/calculation/BooleanCalculationTwo.cpp.obj
+
+src/core/calculation/BooleanCalculationTwo.i: src/core/calculation/BooleanCalculationTwo.cpp.i
+.PHONY : src/core/calculation/BooleanCalculationTwo.i
+
+# target to preprocess a source file
+src/core/calculation/BooleanCalculationTwo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculationTwo.cpp.i
+.PHONY : src/core/calculation/BooleanCalculationTwo.cpp.i
+
+src/core/calculation/BooleanCalculationTwo.s: src/core/calculation/BooleanCalculationTwo.cpp.s
+.PHONY : src/core/calculation/BooleanCalculationTwo.s
+
+# target to generate assembly for a file
+src/core/calculation/BooleanCalculationTwo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculationTwo.cpp.s
+.PHONY : src/core/calculation/BooleanCalculationTwo.cpp.s
+
 src/core/calculation/BracketsCalculation.obj: src/core/calculation/BracketsCalculation.cpp.obj
 .PHONY : src/core/calculation/BracketsCalculation.obj
 
@@ -223,6 +247,30 @@ src/core/calculation/Calculation.s: src/core/calculation/Calculation.cpp.s
 src/core/calculation/Calculation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Calculation.cpp.s
 .PHONY : src/core/calculation/Calculation.cpp.s
+
+src/core/calculation/Function.obj: src/core/calculation/Function.cpp.obj
+.PHONY : src/core/calculation/Function.obj
+
+# target to build an object file
+src/core/calculation/Function.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Function.cpp.obj
+.PHONY : src/core/calculation/Function.cpp.obj
+
+src/core/calculation/Function.i: src/core/calculation/Function.cpp.i
+.PHONY : src/core/calculation/Function.i
+
+# target to preprocess a source file
+src/core/calculation/Function.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Function.cpp.i
+.PHONY : src/core/calculation/Function.cpp.i
+
+src/core/calculation/Function.s: src/core/calculation/Function.cpp.s
+.PHONY : src/core/calculation/Function.s
+
+# target to generate assembly for a file
+src/core/calculation/Function.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Function.cpp.s
+.PHONY : src/core/calculation/Function.cpp.s
 
 src/core/calculation/NumberCalculation.obj: src/core/calculation/NumberCalculation.cpp.obj
 .PHONY : src/core/calculation/NumberCalculation.obj
@@ -452,6 +500,9 @@ help:
 	@echo ... src/core/calculation/BooleanCalculation.obj
 	@echo ... src/core/calculation/BooleanCalculation.i
 	@echo ... src/core/calculation/BooleanCalculation.s
+	@echo ... src/core/calculation/BooleanCalculationTwo.obj
+	@echo ... src/core/calculation/BooleanCalculationTwo.i
+	@echo ... src/core/calculation/BooleanCalculationTwo.s
 	@echo ... src/core/calculation/BracketsCalculation.obj
 	@echo ... src/core/calculation/BracketsCalculation.i
 	@echo ... src/core/calculation/BracketsCalculation.s
@@ -461,6 +512,9 @@ help:
 	@echo ... src/core/calculation/Calculation.obj
 	@echo ... src/core/calculation/Calculation.i
 	@echo ... src/core/calculation/Calculation.s
+	@echo ... src/core/calculation/Function.obj
+	@echo ... src/core/calculation/Function.i
+	@echo ... src/core/calculation/Function.s
 	@echo ... src/core/calculation/NumberCalculation.obj
 	@echo ... src/core/calculation/NumberCalculation.i
 	@echo ... src/core/calculation/NumberCalculation.s

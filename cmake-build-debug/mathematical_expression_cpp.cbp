@@ -87,6 +87,9 @@
 		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/include/BooleanCalculation.h">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
+		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/include/BooleanCalculationTwo.h">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
 		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/include/BracketsCalculation.h">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
@@ -103,6 +106,9 @@
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/include/ConstantRegion.h">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
+		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/include/Function.h">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/include/MEStack.h">
@@ -126,6 +132,9 @@
 		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/src/core/calculation/BooleanCalculation.cpp">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
+		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/src/core/calculation/BooleanCalculationTwo.cpp">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
 		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/src/core/calculation/BracketsCalculation.cpp">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
@@ -133,6 +142,9 @@
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/src/core/calculation/Calculation.cpp">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
+		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/src/core/calculation/Function.cpp">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/src/core/calculation/NumberCalculation.cpp">

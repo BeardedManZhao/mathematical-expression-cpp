@@ -21,7 +21,7 @@ namespace ME {
 
         std::string getName() override;
 
-        virtual CalculationBooleanResults calculation(std::string Formula, std::string formatRequired) = 0;
+        virtual CalculationBooleanResults calculation(std::string Formula, bool formatRequired) = 0;
 
     };
 }

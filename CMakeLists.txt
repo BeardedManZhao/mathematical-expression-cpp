@@ -13,5 +13,14 @@ add_library(
         src/core/manager/CalculationManagement.cpp include/CalculationManagement.h
         src/core/calculation/PrefixExpressionOperation.cpp
         src/exceptional/MExceptional.cpp include/MExceptional.h
-        src/utils/NumberUtils.cpp src/utils/StrUtils.cpp src/dataContainer/MEStack.cpp include/MEStack.h include/PrefixExpressionOperation.h src/core/calculation/NumberCalculation.cpp include/NumberCalculation.h src/core/calculation/Calculation.cpp include/Calculation.h include/mathematical_expression.h src/core/calculation/BracketsCalculation.cpp include/BracketsCalculation.h src/core/calculation/BracketsCalculationTwo.cpp include/BracketsCalculationTwo.h src/core/mathematical_expression.cpp src/core/calculation/BooleanCalculation.cpp include/BooleanCalculation.h)
+        src/utils/NumberUtils.cpp src/utils/StrUtils.cpp src/dataContainer/MEStack.cpp include/MEStack.h include/PrefixExpressionOperation.h
+        src/core/calculation/NumberCalculation.cpp include/NumberCalculation.h
+        src/core/calculation/Calculation.cpp include/Calculation.h
+        src/core/mathematical_expression.cpp include/mathematical_expression.h
+        src/core/calculation/BracketsCalculation.cpp include/BracketsCalculation.h
+        src/core/calculation/BracketsCalculationTwo.cpp include/BracketsCalculationTwo.h
+        src/core/calculation/BooleanCalculation.cpp include/BooleanCalculation.h
+        src/core/calculation/BooleanCalculationTwo.cpp include/BooleanCalculationTwo.h
+        src/core/calculation/FunctionManager.cpp include/FunctionManager.h
+)
 

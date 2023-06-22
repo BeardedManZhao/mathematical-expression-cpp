@@ -72,4 +72,32 @@ namespace NumberUtils {
                                                     .append("]"));
         }
     }
+
+    bool ComparisonOperation(const std::string &ComparisonOperator, double left, double right) {
+        {
+            if (std::equal(LESS_THAN_SIGN.begin(), LESS_THAN_SIGN.end(), ComparisonOperator.begin()))
+                return left < right;
+            else if (std::equal(GREATER_THAN_SIGN.begin(), GREATER_THAN_SIGN.end(), ComparisonOperator.begin()))
+                return left > right;
+            else if (std::equal(LESS_THAN_OR_EQUAL_TO_SIGN.begin(), LESS_THAN_OR_EQUAL_TO_SIGN.end(),
+                                ComparisonOperator.begin()))
+                return left <= right;
+            else if (std::equal(GREATER_THAN_OR_EQUAL_TO_SIGN.begin(), GREATER_THAN_OR_EQUAL_TO_SIGN.end(),
+                                ComparisonOperator.begin()))
+                return left >= right;
+            else if (std::equal(EQUAL_SIGN1.begin(), EQUAL_SIGN1.end(), ComparisonOperator.begin()) ||
+                     std::equal(EQUAL_SIGN2.begin(), EQUAL_SIGN2.end(), ComparisonOperator.begin()))
+                return left == right;
+            else if (std::equal(NOT_EQUAL_SIGN1.begin(), NOT_EQUAL_SIGN1.end(), ComparisonOperator.begin()) ||
+                     std::equal(NOT_EQUAL_SIGN2.begin(), NOT_EQUAL_SIGN2.end(), ComparisonOperator.begin()))
+                return left != right;
+            else {
+                std::string data = "无法进行比较运算，因为有错误的运算符。\n";
+                data.append("The comparison operation cannot be performed because there is an incorrect operator.\n")
+                        .append("Bad comparison operator => ")
+                        .append(ComparisonOperator);
+                throw ME::AbnormalOperation(data);
+            }
+        }
+    }
 }
