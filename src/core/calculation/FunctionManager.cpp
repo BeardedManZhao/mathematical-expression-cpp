@@ -25,3 +25,7 @@ void ME::FunctionManager::append(const std::string &name, const std::function<do
 bool ME::FunctionManager::contain(const std::string &name) {
     return functions.find(name) != functions.end();
 }
+
+std::function<double(double[])> ME::FunctionManager::getFunction(const std::string &name) {
+    return functions.at(name);
+}

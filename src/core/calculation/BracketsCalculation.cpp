@@ -18,7 +18,7 @@ namespace ME {
 
     void BracketsCalculation::check(std::string string) {
         if (string.empty()) {
-            throw ME::WrongFormat("您传入的表达式为null 无法进行计算。");
+            throw ME::WrongFormat("您传入的表达式为null或为空 无法进行计算。");
         }
         unsigned int lastIndex = string.length() - 1;
         // 左括号出现数量

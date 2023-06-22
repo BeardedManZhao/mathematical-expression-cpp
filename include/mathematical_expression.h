@@ -8,6 +8,7 @@
 #include "PrefixExpressionOperation.h"
 #include "BracketsCalculationTwo.h"
 #include "BooleanCalculationTwo.h"
+#include "FunctionFormulaCalculation.h"
 
 #define VERSION "1.0.1-mathematical_expression-C++";
 
@@ -21,6 +22,7 @@ protected:
     ME::PrefixExpressionOperation prefixExpressionOperation;
     ME::BracketsCalculationTwo bracketsCalculation2;
     ME::BooleanCalculationTwo booleanCalculation2;
+    ME::FunctionFormulaCalculation functionFormulaCalculation;
 public:
 
     /**
@@ -56,6 +58,15 @@ public:
      * Compare the Computational mathematics expression calculation component, which can analyze and calculate whether an inequality or equality is true.
      */
     ME::BooleanCalculationTwo getBooleanCalculation2();
+
+    /**
+     *
+     * @return 函数数学表达式计算组件，该组件能够解析一个引用了函数的表达式，能够有效的实现自定义计算函数的效果。
+     *
+     * Function mathematical expression calculation component, which can parse an expression that references a function and effectively achieve the effect of custom calculation functions.
+     */
+    ME::FunctionFormulaCalculation getFunctionFormulaCalculation();
+
 };
 
 

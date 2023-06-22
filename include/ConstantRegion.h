@@ -8,7 +8,6 @@
 #include "string"
 #include "regex"
 
-const float VERSION = 1.22F; // 更新版本，修复错误，于2023-02-25上传新版本
 const std::string STRING_NULL = "null";
 const char LEFT_BRACKET = '(';
 const char RIGHT_BRACKET = ')';

@@ -41,6 +41,19 @@ namespace ME {
          */
         static void append(const std::string &name, const std::function<double(double[])> &func, bool check = true);
 
+        /**
+         * 从函数管理者中获取到指定名称的函数对象。
+         *
+         * Get the Function object with the specified name from the function manager.
+         * @param name 被获取的函数的名称。
+         *
+         * The name of the function being obtained.
+         * @return 指定函数名称对应的函数对象。
+         *
+         * Specifies the Function object corresponding to the function name.
+         */
+        static std::function<double(double[])> getFunction(const std::string &name);
+
     };
 }
 

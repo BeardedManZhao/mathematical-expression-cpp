@@ -100,7 +100,7 @@ int main(){
 
 ### 无括号表达式
 
-- 类组件：core.calculation.number.PrefixExpressionOperation
+- 类组件：ME::PrefixExpressionOperation
 - 介绍
 
   针对一个没有括号，但是有加减乘除以及取余等运算操作的数学表达式而设计的组件，该组件可以实现带有优先级计算的功能，其中通过前缀表达式解析计算，将操作数与操作符一同存储到栈，在存储的同时配有计算优先级比较，如果当下的优先级较小，就先将上一个操作数与操作符与当前操作数进行运算，形成一个新的数值，然后再入栈。
@@ -141,7 +141,7 @@ Active code page: 65001
 
 ### 嵌套括号表达式
 
-- 类组件：core.calculation.number.BracketsCalculation2
+- 类组件：ME::BracketsCalculation2
 - 介绍：
 
   嵌套括号表达式解析组件，能够针对带有多个括号的数学表达式进行解析与结果计算，针对嵌套括号进行优先级的解析与计算，该组件依赖于“core.calculation.number.PrefixExpressionOperation”，在该组件中采用递归进行括号的解析，然后将最内层面的表达式提供给“core.calculation.number.PrefixExpressionOperation”进行计算。
@@ -176,6 +176,49 @@ int main(){
 ```
 Active code page: 65001
 计算层数：2     计算结果：31    计算来源：BracketsCalculation
+
+进程已结束,退出代码0
+```
+
+### 函数运算表达式
+
+- 类组件：ME::FunctionFormulaCalculation
+- 介绍
+
+  针对一些函数的操作，在该框架中也有支持，可以使用上面的类进行这中需要函数的数学表达式的书写，需要注意的是，一切在表达式中使用到的函数都需要在“CalculationManagement”中进行逻辑注册，使得计算的时候可以访问到函数
+- API使用示例
+
+```c++
+#include <mathematical_expression.h>
+#include "FunctionManager.h"
+int main() {
+    system("chcp 65001");
+    // 准备函数 这里的函数的作用是将参数 * 2
+    auto myFun = [](const double *v) {
+        return *v * 2;
+    };
+    // 注册函数 将我们的函数注册成为 DoubleValue 的名称
+    ME::FunctionManager::append("DoubleValue", myFun);
+    // 构建一个数学表达式，表达式中使用到了函数 DoubleValue
+    string s = "2 * DoubleValue(2 + 3) + 1";
+    // 获取到 数学表达式解析库
+    mathematical_expression me;
+    // 获取到函数表达式计算组件
+    auto functionFormulaCalculation = me.getFunctionFormulaCalculation();
+    // 检查数学表达式
+    functionFormulaCalculation.check(s);
+    // 计算出结果
+    ME::CalculationNumberResults results = functionFormulaCalculation << s;
+    // 将结果打印出来
+    cout << "计算层数：" << results.getResultLayers() << "\t计算结果：" << results << "\t计算来源：" << results.getCalculationSourceName() << endl;
+}
+```
+
+- 运行结果
+
+```
+Active code page: 65001
+计算层数：1     计算结果：21    计算来源：BracketsCalculation
 
 进程已结束,退出代码0
 ```

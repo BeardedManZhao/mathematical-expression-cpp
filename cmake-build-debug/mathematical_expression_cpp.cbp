@@ -108,7 +108,10 @@
 		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/include/ConstantRegion.h">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
-		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/include/Function.h">
+		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/include/FunctionFormulaCalculation.h">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
+		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/include/FunctionManager.h">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/include/MEStack.h">
@@ -144,7 +147,10 @@
 		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/src/core/calculation/Calculation.cpp">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
-		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/src/core/calculation/Function.cpp">
+		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/src/core/calculation/FunctionFormulaCalculation.cpp">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
+		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/src/core/calculation/FunctionManager.cpp">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="D:/MyGitHub/mathematical-expression-cpp/src/core/calculation/NumberCalculation.cpp">

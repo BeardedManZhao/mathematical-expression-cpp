@@ -33,6 +33,15 @@ namespace NumberUtils {
     }
 
     /**
+     * 计算一个数值的绝对值
+     * @param x 需要被计算的数值
+     * @return 被计算数值的绝对值
+     */
+    int absoluteValue(int x) {
+        return abs(x);
+    }
+
+    /**
      * 将两个操作符级别进行比较
      *
      * @param s1 操作符1

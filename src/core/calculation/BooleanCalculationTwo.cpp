@@ -7,7 +7,7 @@
 #include "ConstantRegion.h"
 #include "Utils.h"
 
-ME::BracketsCalculationTwo BRACKETS_CALCULATION_2;
+static ME::BracketsCalculationTwo BRACKETS_CALCULATION_2;
 
 namespace ME {
     CalculationBooleanResults BooleanCalculationTwo::operator>>(std::string &format) {

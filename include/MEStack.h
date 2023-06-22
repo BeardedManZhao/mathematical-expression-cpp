@@ -31,6 +31,12 @@ namespace ME {
 
     public:
         T get(int index);
+
+        /**
+         * 将栈中的栈顶元素直接取出，此操作将会删除栈顶元素，并将栈顶元素获取到。
+         * @return 被成功删除的栈顶的元素。
+         */
+        T pop_get();
     };
 
     template<typename T>
@@ -38,6 +44,12 @@ namespace ME {
         return this->c[index];
     }
 
+    template<typename T>
+    T MEStack<T>::pop_get() {
+        T v = this->top();
+        this->pop();
+        return v;
+    }
 
 } // ME
 
