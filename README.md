@@ -27,7 +27,9 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_executable(MyCpp main.cpp)
 # Link to the project (link the library to the compiled target)
-target_link_libraries(${PROJECT_NAME} D:\\liming\\Project\\Clion\\MyCpp\\cmake-build-debug\\libmathematical_expression_cpp.dll)
+target_link_libraries(
+        ${PROJECT_NAME} D:\\liming\\Project\\Clion\\MyCpp\\cmake-build-debug\\mathematical_expression_cpp_WINx64.dll
+)
 ```
 
 After the integration operation is completed, you can try to enter the following code to determine whether the function

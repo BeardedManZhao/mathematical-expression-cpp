@@ -19,10 +19,13 @@ project(MyCpp)
 set(CMAKE_CXX_STANDARD 14)
 
 # 设置头文件目录（可以自定义）
-include_directories(${PROJECT_SOURCE_DIR}/head)
+include_directories(${PROJECT_SOURCE_DIR}/include)
+# 设置库文件目录
 add_executable(MyCpp main.cpp)
 # 与项目进行链接（将库链接到编译之后的目标中）
-target_link_libraries(${PROJECT_NAME} D:\\liming\\Project\\Clion\\MyCpp\\cmake-build-debug\\mathematical_expression_cpp.dll)
+target_link_libraries(
+        ${PROJECT_NAME} D:\\liming\\Project\\Clion\\MyCpp\\cmake-build-debug\\mathematical_expression_cpp_WINx64.dll
+)
 ```
 
 集成操作完毕之后，您可以尝试输入以下代码来判断库的功能是否正常，下面是该库的一个测试代码，如果其运行之后的程序main函数返回值为0
