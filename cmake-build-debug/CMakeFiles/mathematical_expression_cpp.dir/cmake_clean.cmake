@@ -23,8 +23,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/PrefixExpressionOperation.cpp.obj.d"
   "CMakeFiles/mathematical_expression_cpp.dir/src/core/container/CalculationResults.cpp.obj"
   "CMakeFiles/mathematical_expression_cpp.dir/src/core/container/CalculationResults.cpp.obj.d"
-  "CMakeFiles/mathematical_expression_cpp.dir/src/core/manager/CalculationManagement.cpp.obj"
-  "CMakeFiles/mathematical_expression_cpp.dir/src/core/manager/CalculationManagement.cpp.obj.d"
   "CMakeFiles/mathematical_expression_cpp.dir/src/core/mathematical_expression.cpp.obj"
   "CMakeFiles/mathematical_expression_cpp.dir/src/core/mathematical_expression.cpp.obj.d"
   "CMakeFiles/mathematical_expression_cpp.dir/src/dataContainer/MEStack.cpp.obj"

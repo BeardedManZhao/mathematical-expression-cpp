@@ -44,19 +44,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "D:\liming\CX\Clion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "D:\liming\CX\Clion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\MyGitHub\mathematical-expression-cpp
+CMAKE_SOURCE_DIR = D:\MyGithub\mathematical-expression-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug
+CMAKE_BINARY_DIR = D:\MyGithub\mathematical-expression-cpp\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -80,14 +80,14 @@ clean: CMakeFiles/mathematical_expression_cpp.dir/clean
 CMakeFiles/mathematical_expression_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 "Built target mathematical_expression_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\MyGithub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target mathematical_expression_cpp"
 .PHONY : CMakeFiles/mathematical_expression_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mathematical_expression_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\MyGithub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/mathematical_expression_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\MyGithub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/mathematical_expression_cpp.dir/rule
 
 # Convenience name for target.

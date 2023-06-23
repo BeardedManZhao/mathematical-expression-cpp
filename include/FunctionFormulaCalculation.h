@@ -8,6 +8,7 @@
 #include "NumberCalculation.h"
 
 namespace ME {
+
     class FunctionFormulaCalculation : public NumberCalculation {
     public:
         string formatStr(std::string string) override;

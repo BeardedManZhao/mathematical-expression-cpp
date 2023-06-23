@@ -7,6 +7,13 @@
 
 #include <string>
 
+/**
+ * 计算接口 其中提供不同计算组件针对数学公式的不同实现
+ * <p>
+ * The calculation interface provides different implementations of different calculation components for mathematical formulas
+ *
+ * @author zhao
+ */
 class Calculation {
 
 public:

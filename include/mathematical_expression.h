@@ -11,7 +11,7 @@
 #include "CumulativeCalculation.h"
 #include "FunctionFormulaCalculation.h"
 
-#define VERSION "1.0.1-mathematical_expression-C++";
+#define VERSION "1.0.1.1-mathematical_expression-C++";
 
 /**
  * 数学表达式解析计算库中的门户类，由该类获取到数学表达式计算库中的相关数据对象。

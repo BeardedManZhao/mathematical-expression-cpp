@@ -1,3 +1,3 @@
-"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\mathematical_expression_cpp.dir/objects.a
-"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\mingw\bin\ar.exe" qc CMakeFiles\mathematical_expression_cpp.dir/objects.a @CMakeFiles\mathematical_expression_cpp.dir\objects1.rsp
-"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\mingw\bin\g++.exe" -g -shared -o libmathematical_expression_cpp.dll -Wl,--out-implib,libmathematical_expression_cpp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\mathematical_expression_cpp.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\mathematical_expression_cpp.dir\linklibs.rsp
+"D:\liming\CX\Clion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\mathematical_expression_cpp.dir/objects.a
+D:\liming\CX\Clion\CLION2~1.1\bin\mingw\bin\ar.exe qc CMakeFiles\mathematical_expression_cpp.dir/objects.a @CMakeFiles\mathematical_expression_cpp.dir\objects1.rsp
+D:\liming\CX\Clion\CLION2~1.1\bin\mingw\bin\G__~1.EXE -g -shared -o libmathematical_expression_cpp.dll -Wl,--out-implib,libmathematical_expression_cpp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\mathematical_expression_cpp.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\mathematical_expression_cpp.dir\linklibs.rsp

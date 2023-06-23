@@ -1,4 +1,4 @@
-"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S D:\MyGitHub\mathematical-expression-cpp -B D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug
+"D:\liming\CX\Clion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S D:\MyGithub\mathematical-expression-cpp -B D:\MyGithub\mathematical-expression-cpp\cmake-build-debug
 -- Configuring done
 -- Generating done
--- Build files have been written to: D:/MyGitHub/mathematical-expression-cpp/cmake-build-debug
+-- Build files have been written to: D:/MyGithub/mathematical-expression-cpp/cmake-build-debug

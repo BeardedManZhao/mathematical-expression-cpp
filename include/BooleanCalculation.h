@@ -9,6 +9,14 @@
 #include "CalculationResults.h"
 
 namespace ME {
+
+    /**
+     * 计算一个比较表达式的计算组件的父类，计算结果一般都是包含布尔值结果的对象
+     * <p>
+     * Compute the parent class of the calculation component of a comparison expression. The calculation result is generally an object containing Boolean results
+     *
+     * @author zhao
+     */
     class BooleanCalculation : public Calculation {
     public:
         std::string formatStr(std::string string) override;
