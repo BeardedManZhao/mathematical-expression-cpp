@@ -7,6 +7,7 @@
 
 #include <string>
 #include "MExceptional.h"
+#include "vector"
 
 namespace StrUtils {
 
@@ -41,6 +42,24 @@ namespace StrUtils {
      * @return 转换之后的数值
      */
     int charToInteger(char c);
+
+    /**
+     * 按照字符来拆分一个字符串。
+     * @param data 需要被拆分的字符串 。
+     * @param splitChar 需要作为拆分符号的字符。
+     * @return 拆分之后的所有子字符串组合成为的 vector 对象。
+     */
+    std::vector<std::string> splitByChar(const std::string &data, char splitChar);
+
+    /**
+     * 将一个字符串中的指定的子字符串替换成为新的字符串。
+     * @param old_string 需要被替换的字符串
+     * @param replace_string 被替换的子字符串
+     * @param new_string 替换之后的新的子字符串
+     * @return 替换之后的新字符串。
+     */
+    std::string
+    replace(const std::string &old_string, const std::string &replace_string, const std::string &new_string);
 }
 
 namespace NumberUtils {

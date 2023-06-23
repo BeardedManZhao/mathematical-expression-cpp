@@ -5,9 +5,10 @@
 #include "BooleanCalculationTwo.h"
 #include "BracketsCalculationTwo.h"
 #include "ConstantRegion.h"
+#include "CalculationConstant.h"
 #include "Utils.h"
 
-static ME::BracketsCalculationTwo BRACKETS_CALCULATION_2;
+static ME::BracketsCalculationTwo BRACKETS_CALCULATION_2 = ME::CalculationConstant::getBracketsCalculationTwo();
 
 namespace ME {
     CalculationBooleanResults BooleanCalculationTwo::operator>>(std::string &format) {

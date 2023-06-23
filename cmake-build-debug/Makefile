@@ -248,6 +248,54 @@ src/core/calculation/Calculation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Calculation.cpp.s
 .PHONY : src/core/calculation/Calculation.cpp.s
 
+src/core/calculation/CalculationConstant.obj: src/core/calculation/CalculationConstant.cpp.obj
+.PHONY : src/core/calculation/CalculationConstant.obj
+
+# target to build an object file
+src/core/calculation/CalculationConstant.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.obj
+.PHONY : src/core/calculation/CalculationConstant.cpp.obj
+
+src/core/calculation/CalculationConstant.i: src/core/calculation/CalculationConstant.cpp.i
+.PHONY : src/core/calculation/CalculationConstant.i
+
+# target to preprocess a source file
+src/core/calculation/CalculationConstant.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.i
+.PHONY : src/core/calculation/CalculationConstant.cpp.i
+
+src/core/calculation/CalculationConstant.s: src/core/calculation/CalculationConstant.cpp.s
+.PHONY : src/core/calculation/CalculationConstant.s
+
+# target to generate assembly for a file
+src/core/calculation/CalculationConstant.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.s
+.PHONY : src/core/calculation/CalculationConstant.cpp.s
+
+src/core/calculation/CumulativeCalculation.obj: src/core/calculation/CumulativeCalculation.cpp.obj
+.PHONY : src/core/calculation/CumulativeCalculation.obj
+
+# target to build an object file
+src/core/calculation/CumulativeCalculation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.obj
+.PHONY : src/core/calculation/CumulativeCalculation.cpp.obj
+
+src/core/calculation/CumulativeCalculation.i: src/core/calculation/CumulativeCalculation.cpp.i
+.PHONY : src/core/calculation/CumulativeCalculation.i
+
+# target to preprocess a source file
+src/core/calculation/CumulativeCalculation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.i
+.PHONY : src/core/calculation/CumulativeCalculation.cpp.i
+
+src/core/calculation/CumulativeCalculation.s: src/core/calculation/CumulativeCalculation.cpp.s
+.PHONY : src/core/calculation/CumulativeCalculation.s
+
+# target to generate assembly for a file
+src/core/calculation/CumulativeCalculation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.s
+.PHONY : src/core/calculation/CumulativeCalculation.cpp.s
+
 src/core/calculation/FunctionFormulaCalculation.obj: src/core/calculation/FunctionFormulaCalculation.cpp.obj
 .PHONY : src/core/calculation/FunctionFormulaCalculation.obj
 
@@ -536,6 +584,12 @@ help:
 	@echo ... src/core/calculation/Calculation.obj
 	@echo ... src/core/calculation/Calculation.i
 	@echo ... src/core/calculation/Calculation.s
+	@echo ... src/core/calculation/CalculationConstant.obj
+	@echo ... src/core/calculation/CalculationConstant.i
+	@echo ... src/core/calculation/CalculationConstant.s
+	@echo ... src/core/calculation/CumulativeCalculation.obj
+	@echo ... src/core/calculation/CumulativeCalculation.i
+	@echo ... src/core/calculation/CumulativeCalculation.s
 	@echo ... src/core/calculation/FunctionFormulaCalculation.obj
 	@echo ... src/core/calculation/FunctionFormulaCalculation.i
 	@echo ... src/core/calculation/FunctionFormulaCalculation.s

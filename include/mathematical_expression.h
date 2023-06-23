@@ -8,6 +8,7 @@
 #include "PrefixExpressionOperation.h"
 #include "BracketsCalculationTwo.h"
 #include "BooleanCalculationTwo.h"
+#include "CumulativeCalculation.h"
 #include "FunctionFormulaCalculation.h"
 
 #define VERSION "1.0.1-mathematical_expression-C++";
@@ -22,6 +23,7 @@ protected:
     ME::PrefixExpressionOperation prefixExpressionOperation;
     ME::BracketsCalculationTwo bracketsCalculation2;
     ME::BooleanCalculationTwo booleanCalculation2;
+    ME::CumulativeCalculation cumulativeCalculation;
     ME::FunctionFormulaCalculation functionFormulaCalculation;
 public:
 
@@ -58,6 +60,14 @@ public:
      * Compare the Computational mathematics expression calculation component, which can analyze and calculate whether an inequality or equality is true.
      */
     ME::BooleanCalculationTwo getBooleanCalculation2();
+
+    /**
+     *
+     * @return 区间累加数学表达式解析计算组件，该组件能够实现按照一定等差的数列求和的方式进行公式的计算操作。
+     *
+     * Interval accumulation mathematical expression analysis and calculation component, which can perform formula calculation operations by summing a certain sequence of equal differences.
+     */
+    ME::CumulativeCalculation getCumulativeCalculation();
 
     /**
      *

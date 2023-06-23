@@ -6,11 +6,12 @@
 #include "MEStack.h"
 #include "Utils.h"
 #include "ConstantRegion.h"
+#include "CalculationConstant.h"
 #include "MExceptional.h"
 #include "BracketsCalculationTwo.h"
 #include "FunctionManager.h"
 
-static ME::BracketsCalculationTwo BRACKETS_CALCULATION_2;
+static ME::BracketsCalculationTwo BRACKETS_CALCULATION_2 = ME::CalculationConstant::getBracketsCalculationTwo();
 
 string ME::FunctionFormulaCalculation::formatStr(std::string string) {
     return regex_replace(string, ALL_INVISIBLE_CHARACTERS_PATTERN, NO_CHAR);

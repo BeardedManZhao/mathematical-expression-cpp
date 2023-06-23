@@ -89,4 +89,53 @@ namespace StrUtils {
         // 判断是否为负数，如果不是负数直接返回值
         return s[0] == MINUS_SIGN ? -res : res;
     }
+
+    std::vector<std::string> splitByChar(const std::string &data, char splitChar) {
+        std::vector<std::string> res;
+        std::string buffer;
+        for (const auto &item: data) {
+            if (item != splitChar) {
+                buffer.push_back(item);
+            } else {
+                res.push_back(buffer);
+                buffer = std::string();
+            }
+        }
+        if (!buffer.empty()) {
+            res.push_back(buffer);
+        }
+        return res;
+    }
+
+    /**
+     * 将一个字符串中的指定的子字符串替换成为新的字符串。
+     * @param old_string 需要被替换的字符串
+     * @param replace_string 被替换的子字符串
+     * @param new_string 替换之后的新的子字符串
+     * @return 替换之后的新字符串。
+     */
+    std::string
+    replace(const std::string &old_string, const std::string &replace_string, const std::string &new_string) {
+        if (old_string.empty() || replace_string.empty()) {
+            return "";
+        }
+        std::string res;
+        unsigned int l = replace_string.size();
+        for (unsigned int start = 0, end = l - 1; end < old_string.length(); ++start, ++end) {
+            // 判断当前的子字符串是否需要被替换
+            std::string subStr = old_string.substr(start, l);
+            if (std::equal(subStr.begin(), subStr.end(), replace_string.begin())) {
+                // 需要被替换
+                res = res.replace(res.length() - l + 1, l, new_string);
+            } else {
+                // 不需要被替换
+                if (start == 0) {
+                    res.append(subStr);
+                } else {
+                    res += old_string[end];
+                }
+            }
+        }
+        return res;
+    }
 }

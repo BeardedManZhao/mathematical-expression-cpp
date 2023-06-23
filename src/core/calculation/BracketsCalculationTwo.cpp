@@ -29,7 +29,7 @@ ME::CalculationNumberResults ME::BracketsCalculationTwo::calculation(std::string
         } else if (aChar == RIGHT_BRACKET && --count == 0) {
             setOk = false;
             // 如果当前字符是一个右括号，那么就将括号中的字符进行递归计算，计算之后将该参数作为公式的一部分
-            CalculationNumberResults calculation = operation.calculation(
+            CalculationNumberResults calculation = BracketsCalculationTwo::calculation(
                     Formula.substr(start, i - start + 1), formatRequired
             );
             stringBuilder.append(to_string(calculation.getResult()));

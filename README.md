@@ -194,6 +194,53 @@ Active code page: 65001
 进程已结束,退出代码0
 ```
 
+### Interval accumulation expression
+
+- Full class name：ME::CumulativeCalculation
+- introduce
+
+  In mathematical expressions, there is often such a formula. The content of the formula is shown in the following
+  figure. You can see the number sequence operations that need to be accumulated.
+
+  Then, you can use the Full class name above to achieve the purpose you need.
+
+  ![img_1](https://user-images.githubusercontent.com/113756063/201575828-5b76af88-6040-430d-a54c-61faf5905594.png)
+
+- API Usage Example
+
+  The syntax level is almost the same as that of other components. The calculation example of the mathematical
+  expression written in the component is shown below. What is shown here is the calculation of an accumulative
+  mathematical formula.
+
+```c++
+#include "mathematical_expression.h"
+int main() {
+    system("chcp 65001");
+    // Create a mathematical expression parsing library object
+    mathematical_expression me;
+    // Obtain a component for calculating cumulative mathematical expressions
+    ME::CumulativeCalculation cumulativeCalculation = me.getCumulativeCalculation();
+    // Construct a mathematical expression where 'n [1,10,1]' is similar to the accumulation symbol in mathematics. n will continue to increase within this interval, and each increase will be carried into the formula for calculation once
+    // The last 1 in [1,10,1] represents an increase in step size, which can achieve the accumulation of different equivalences within the interval
+    string s = "n[1,10,1] 2 * (n + 1)";
+    // Check mathematical expressions
+    cumulativeCalculation.check(s);
+    // Calculation results
+    ME::CalculationNumberResults results = cumulativeCalculation << s;
+    // Print out the results
+    cout << "计算层数：" << results.getResultLayers() << "\t计算结果：" << results << "\t计算来源：" << results.getCalculationSourceName() << endl;
+}
+```
+
+- Running results
+
+```
+Active code page: 65001
+计算层数：11    计算结果：130   计算来源：CumulativeCalculation
+
+进程已结束,退出代码0
+```
+
 ### Function operation expression
 
 - Full class name：ME::FunctionFormulaCalculation
@@ -249,7 +296,7 @@ provide an explanation of the unique features in C++.
 The result object calculated by the calculation component also has calculation function, which can be used to perform
 calculation operations between multiple operands based on this method. The following is an example.
 
-```
+```c++
 #include <mathematical_expression.h>
 
 int main() {
@@ -273,25 +320,10 @@ int main() {
 - Running results
 
 ```
-#include <mathematical_expression.h>
+1.0.1-mathematical_expression-C++
+res1 + res1 = 24        其结果的源 = (BracketsCalculation + BracketsCalculation)
 
-int main() {
-    system("chcp 65001");
-    // Prepare mathematical expression objects
-    mathematical_expression me;
-    // Print out the version number of the mathematical expression library
-    std::cout << mathematical_expression::getVERSION() << endl;
-    // Prepare mathematical expressions to be evaluated
-    std::string f = "1 + (3 - 2) + 10";
-    // Prepare calculation components
-    ME::BracketsCalculationTwo bracketsCalculationTwo = me.getBracketsCalculation2();
-
-    // Start calculation
-    ME::CalculationNumberResults res1 = bracketsCalculationTwo << f;
-    // Using Result Objects for Calculations
-    ME::CalculationNumberResults res2 = res1 + res1;
-    std::cout << "res1 + res1 = " << res2 << "\t其结果的源 = " << res2.getCalculationSourceName() << endl;
-}
+进程已结束,退出代码0
 ```
 
 ### Alias operations in operands

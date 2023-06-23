@@ -308,6 +308,36 @@ CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaC
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculation.cpp.s"
 	"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\MyGitHub\mathematical-expression-cpp\src\core\calculation\FunctionFormulaCalculation.cpp -o CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\FunctionFormulaCalculation.cpp.s
 
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.obj: CMakeFiles/mathematical_expression_cpp.dir/flags.make
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.obj: CMakeFiles/mathematical_expression_cpp.dir/includes_CXX.rsp
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.obj: ../src/core/calculation/CalculationConstant.cpp
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.obj: CMakeFiles/mathematical_expression_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.obj"
+	"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.obj -MF CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\CalculationConstant.cpp.obj.d -o CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\CalculationConstant.cpp.obj -c D:\MyGitHub\mathematical-expression-cpp\src\core\calculation\CalculationConstant.cpp
+
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.i"
+	"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\MyGitHub\mathematical-expression-cpp\src\core\calculation\CalculationConstant.cpp > CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\CalculationConstant.cpp.i
+
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.s"
+	"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\MyGitHub\mathematical-expression-cpp\src\core\calculation\CalculationConstant.cpp -o CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\CalculationConstant.cpp.s
+
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.obj: CMakeFiles/mathematical_expression_cpp.dir/flags.make
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.obj: CMakeFiles/mathematical_expression_cpp.dir/includes_CXX.rsp
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.obj: ../src/core/calculation/CumulativeCalculation.cpp
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.obj: CMakeFiles/mathematical_expression_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.obj"
+	"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.obj -MF CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\CumulativeCalculation.cpp.obj.d -o CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\CumulativeCalculation.cpp.obj -c D:\MyGitHub\mathematical-expression-cpp\src\core\calculation\CumulativeCalculation.cpp
+
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.i"
+	"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\MyGitHub\mathematical-expression-cpp\src\core\calculation\CumulativeCalculation.cpp > CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\CumulativeCalculation.cpp.i
+
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.s"
+	"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\MyGitHub\mathematical-expression-cpp\src\core\calculation\CumulativeCalculation.cpp -o CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\CumulativeCalculation.cpp.s
+
 # Object files for target mathematical_expression_cpp
 mathematical_expression_cpp_OBJECTS = \
 "CMakeFiles/mathematical_expression_cpp.dir/src/core/container/CalculationResults.cpp.obj" \
@@ -325,7 +355,9 @@ mathematical_expression_cpp_OBJECTS = \
 "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj" \
 "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculationTwo.cpp.obj" \
 "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionManager.cpp.obj" \
-"CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculation.cpp.obj"
+"CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculation.cpp.obj" \
+"CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.obj" \
+"CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.obj"
 
 # External object files for target mathematical_expression_cpp
 mathematical_expression_cpp_EXTERNAL_OBJECTS =
@@ -346,11 +378,13 @@ libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/s
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculationTwo.cpp.obj
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionManager.cpp.obj
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculation.cpp.obj
+libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.obj
+libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.obj
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/build.make
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/linklibs.rsp
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/objects1.rsp
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX shared library libmathematical_expression_cpp.dll"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX shared library libmathematical_expression_cpp.dll"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\mathematical_expression_cpp.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -18,3 +18,7 @@ ME::BooleanCalculationTwo mathematical_expression::getBooleanCalculation2() {
 ME::FunctionFormulaCalculation mathematical_expression::getFunctionFormulaCalculation() {
     return mathematical_expression::functionFormulaCalculation;
 }
+
+ME::CumulativeCalculation mathematical_expression::getCumulativeCalculation() {
+    return mathematical_expression::cumulativeCalculation;
+}

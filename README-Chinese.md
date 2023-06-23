@@ -180,6 +180,46 @@ Active code page: 65001
 进程已结束,退出代码0
 ```
 
+### 区间累加表达式
+
+- 类组件：ME::CumulativeCalculation
+- 介绍
+
+  在数学表达式中，往往有这样的一种公式，公式内容如下图所示，可以看到需要进行累加的数列操作，那么在这种公式的需求下，您可以通过上面的类组件去达到您所需要的目的。
+  ![img_1](https://user-images.githubusercontent.com/113756063/201575828-5b76af88-6040-430d-a54c-61faf5905594.png)
+- API使用示例
+
+  语法层面于其他组件几乎一致，数学表达式的撰写于组件的计算示例就如下面所示，在这里展示的就是一个累加数学公式的计算。
+
+```c++
+#include "mathematical_expression.h"
+int main() {
+    system("chcp 65001");
+    // 创建数学表达式解析库对象
+    mathematical_expression me;
+    // 获取一个计算累加数学表达式的组件
+    ME::CumulativeCalculation cumulativeCalculation = me.getCumulativeCalculation();
+    // 构建一个数学表达式，这里的"n[1,10,1]"就类似数学中的累加符号，n会在这个区间内不断增加，每增加一次都会被带入公式中计算一次
+    // 其中[1,10,1]中的最后一个1 代表增加步长，能够实现区间内不同等差值的累加
+    string s = "n[1,10,1] 2 * (n + 1)";
+    // 检查数学表达式
+    cumulativeCalculation.check(s);
+    // 计算结果
+    ME::CalculationNumberResults results = cumulativeCalculation << s;
+    // 将结果打印出来
+    cout << "计算层数：" << results.getResultLayers() << "\t计算结果：" << results << "\t计算来源：" << results.getCalculationSourceName() << endl;
+}
+```
+
+- 运行结果
+
+```
+Active code page: 65001
+计算层数：11    计算结果：130   计算来源：CumulativeCalculation
+
+进程已结束,退出代码0
+```
+
 ### 函数运算表达式
 
 - 类组件：ME::FunctionFormulaCalculation
@@ -231,7 +271,7 @@ Active code page: 65001
 
 通过计算组件计算出来的结果对象，其还具有运算功能，可以基于此方式来进行多个操作数之间的计算操作，接下来就是一个示例。
 
-```
+```c++
 #include <mathematical_expression.h>
 
 int main() {
@@ -255,25 +295,10 @@ int main() {
 - 运行结果
 
 ```
-#include <mathematical_expression.h>
+1.0.1-mathematical_expression-C++
+res1 + res1 = 24        其结果的源 = (BracketsCalculation + BracketsCalculation)
 
-int main() {
-    system("chcp 65001");
-    // 准备数学表达式对象
-    mathematical_expression me;
-    // 打印出数学表达式库的版本号
-    std::cout << mathematical_expression::getVERSION() << endl;
-    // 准备要被计算的数学表达式
-    std::string f = "1 + (3 - 2) + 10";
-    // 准备计算组件
-    ME::BracketsCalculationTwo bracketsCalculationTwo = me.getBracketsCalculation2();
-
-    // 开始进行计算
-    ME::CalculationNumberResults res1 = bracketsCalculationTwo << f;
-    // 使用结果对象进行计算
-    ME::CalculationNumberResults res2 = res1 + res1;
-    std::cout << "res1 + res1 = " << res2 << "\t其结果的源 = " << res2.getCalculationSourceName() << endl;
-}
+进程已结束,退出代码0
 ```
 
 ### 操作数中的别名操作
@@ -314,7 +339,6 @@ BracketsCalculation
 res1
 
 进程已结束,退出代码0
-
 ```
 
 接下来是一个有关别名操作的有趣案例（操作数之间的计算 + 别名）
