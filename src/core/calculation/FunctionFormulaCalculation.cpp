@@ -47,8 +47,7 @@ void ME::FunctionFormulaCalculation::check(std::string string) {
         }
     }
     // 迭代所有的函数公式，判断是否有错误
-    int size = start.size();
-    int size1 = end.size();
+    int size = start.size(), size1 = end.size();
     if (size == size1) {
         for (int i = 0; i < size; i++) {
             unsigned int start_index = start.pop_get() + 2;

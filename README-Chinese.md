@@ -266,6 +266,47 @@ Active code page: 65001
 进程已结束,退出代码0
 ```
 
+### 快速区间求和计算组件（基于括号表达式）
+
+- 类组件：ME::FastSumOfIntervalsBrackets.py
+- 介绍
+
+  1.15版本的新产物，区间快速求和组件，是针对一个等差为1的区间进行所有元素求和的快速组件，它将一个区间在逻辑上模拟成为一个数学数列，并通过求和公式进行快速的求和。
+
+  该组件实现了共享池计算功能，将检查，计算，以及上一次结果记录实现，能够加快计算速度，具体API调用如下所示。
+
+```c++
+#include "mathematical_expression.h"
+
+int main() {
+    system("chcp 65001");
+    // 获取到数学表达式解析库对象
+    mathematical_expression me;
+    // 获取到区间累加表达式对象
+    ME::FastSumOfIntervalsBrackets fastSumOfIntervalsBrackets = me.getFastSumOfIntervalsBrackets();
+    // 准备需要被计算的数学表达式，这里的数学表达式中有个逗号，逗号两边代表的就是区间的两个边界
+    string f1 = "1 + 10, 20 - (5 + 2)";
+    // 检查数学表达式
+    fastSumOfIntervalsBrackets.check(f1);
+    // 将步长修改为 2
+    fastSumOfIntervalsBrackets.step = 2;
+    // 开始计算 并获取到结果对象
+    ME::CalculationNumberResults r1 = fastSumOfIntervalsBrackets << f1;
+    // 开始进行结果查看
+    cout << "计算层数：" << r1.getResultLayers() << "\t计算结果：" << r1 << "\t计算来源：" << r1.getCalculationSourceName()
+         << endl;
+}
+```
+
+- 运行结果 从上面代码中我们可以看到，快速区间求和计算的公式由被逗号分割的两个括号表达式组成
+
+```
+Active code page: 65001
+计算层数：1     计算结果：24    计算来源：FastSumOfIntervalsBrackets
+
+进程已结束,退出代码0
+```
+
 ## C++API 特性
 
 在 C++ 中，库具有更快的解析与计算速度，同时其具有更加庞大的功能，接下来针对C++中的特有功能来进行一个说明。

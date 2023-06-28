@@ -296,6 +296,30 @@ src/core/calculation/CumulativeCalculation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.s
 .PHONY : src/core/calculation/CumulativeCalculation.cpp.s
 
+src/core/calculation/FastSumOfIntervalsBrackets.obj: src/core/calculation/FastSumOfIntervalsBrackets.cpp.obj
+.PHONY : src/core/calculation/FastSumOfIntervalsBrackets.obj
+
+# target to build an object file
+src/core/calculation/FastSumOfIntervalsBrackets.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FastSumOfIntervalsBrackets.cpp.obj
+.PHONY : src/core/calculation/FastSumOfIntervalsBrackets.cpp.obj
+
+src/core/calculation/FastSumOfIntervalsBrackets.i: src/core/calculation/FastSumOfIntervalsBrackets.cpp.i
+.PHONY : src/core/calculation/FastSumOfIntervalsBrackets.i
+
+# target to preprocess a source file
+src/core/calculation/FastSumOfIntervalsBrackets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FastSumOfIntervalsBrackets.cpp.i
+.PHONY : src/core/calculation/FastSumOfIntervalsBrackets.cpp.i
+
+src/core/calculation/FastSumOfIntervalsBrackets.s: src/core/calculation/FastSumOfIntervalsBrackets.cpp.s
+.PHONY : src/core/calculation/FastSumOfIntervalsBrackets.s
+
+# target to generate assembly for a file
+src/core/calculation/FastSumOfIntervalsBrackets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FastSumOfIntervalsBrackets.cpp.s
+.PHONY : src/core/calculation/FastSumOfIntervalsBrackets.cpp.s
+
 src/core/calculation/FunctionFormulaCalculation.obj: src/core/calculation/FunctionFormulaCalculation.cpp.obj
 .PHONY : src/core/calculation/FunctionFormulaCalculation.obj
 
@@ -391,6 +415,30 @@ src/core/calculation/PrefixExpressionOperation.s: src/core/calculation/PrefixExp
 src/core/calculation/PrefixExpressionOperation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/PrefixExpressionOperation.cpp.s
 .PHONY : src/core/calculation/PrefixExpressionOperation.cpp.s
+
+src/core/calculation/SharedCalculation.obj: src/core/calculation/SharedCalculation.cpp.obj
+.PHONY : src/core/calculation/SharedCalculation.obj
+
+# target to build an object file
+src/core/calculation/SharedCalculation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/SharedCalculation.cpp.obj
+.PHONY : src/core/calculation/SharedCalculation.cpp.obj
+
+src/core/calculation/SharedCalculation.i: src/core/calculation/SharedCalculation.cpp.i
+.PHONY : src/core/calculation/SharedCalculation.i
+
+# target to preprocess a source file
+src/core/calculation/SharedCalculation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/SharedCalculation.cpp.i
+.PHONY : src/core/calculation/SharedCalculation.cpp.i
+
+src/core/calculation/SharedCalculation.s: src/core/calculation/SharedCalculation.cpp.s
+.PHONY : src/core/calculation/SharedCalculation.s
+
+# target to generate assembly for a file
+src/core/calculation/SharedCalculation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/SharedCalculation.cpp.s
+.PHONY : src/core/calculation/SharedCalculation.cpp.s
 
 src/core/container/CalculationResults.obj: src/core/container/CalculationResults.cpp.obj
 .PHONY : src/core/container/CalculationResults.obj
@@ -566,6 +614,9 @@ help:
 	@echo ... src/core/calculation/CumulativeCalculation.obj
 	@echo ... src/core/calculation/CumulativeCalculation.i
 	@echo ... src/core/calculation/CumulativeCalculation.s
+	@echo ... src/core/calculation/FastSumOfIntervalsBrackets.obj
+	@echo ... src/core/calculation/FastSumOfIntervalsBrackets.i
+	@echo ... src/core/calculation/FastSumOfIntervalsBrackets.s
 	@echo ... src/core/calculation/FunctionFormulaCalculation.obj
 	@echo ... src/core/calculation/FunctionFormulaCalculation.i
 	@echo ... src/core/calculation/FunctionFormulaCalculation.s
@@ -578,6 +629,9 @@ help:
 	@echo ... src/core/calculation/PrefixExpressionOperation.obj
 	@echo ... src/core/calculation/PrefixExpressionOperation.i
 	@echo ... src/core/calculation/PrefixExpressionOperation.s
+	@echo ... src/core/calculation/SharedCalculation.obj
+	@echo ... src/core/calculation/SharedCalculation.i
+	@echo ... src/core/calculation/SharedCalculation.s
 	@echo ... src/core/container/CalculationResults.obj
 	@echo ... src/core/container/CalculationResults.i
 	@echo ... src/core/container/CalculationResults.s

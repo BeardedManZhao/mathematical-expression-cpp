@@ -42,6 +42,25 @@ namespace NumberUtils {
     }
 
     /**
+     * 计算一个数值的绝对值
+     * @param x 需要被计算的数值
+     * @return 被计算数值的绝对值
+     */
+    double absoluteValue(double x) {
+        return x < 0 ? -x : x;
+    }
+
+    /**
+     * 返回两个数值中的最大数值
+     * @param v1 需要用于比较的数值
+     * @param v2 需要用于比较的数值
+     * @return 两个数值中较大的数值
+     */
+    double max(double v1, double v2) {
+        return v1 > v2 ? v1 : v2;
+    }
+
+    /**
      * 将两个操作符级别进行比较
      *
      * @param s1 操作符1
@@ -109,4 +128,40 @@ namespace NumberUtils {
             }
         }
     }
+
+    /**
+     * 带有步长的方式计算一个区间内所有数值的累加
+     *
+     * @param start 区间起始数值
+     * @param end   区间终止数值
+     * @return 区间内元素之和
+     */
+    double sumOfRange(double start, double end) {
+        if (start == end) {
+            return start;
+        }
+        return (start + end) * (absoluteValue(end - start) + 1) / 2;
+    }
+
+    /**
+     * 带有步长的方式计算一个区间内所有数值的累加
+     *
+     * @param start 区间起始数值
+     * @param end   区间终止数值
+     * @param step  区间内每一个元素之间的步长
+     * @return 区间内元素之和
+     */
+    double sumOfRange(double start, double end, double step) {
+        if (step == 1) return sumOfRange(start, end);
+        if (start == end) {
+            return start;
+        }
+        double abs = absoluteValue(end - start);
+        end -= fmod(abs, step);
+        abs = absoluteValue(end - start);
+        double n = 1 + (abs / step);
+        return n * start + n * (n - 1) * (max(step, 2.0)) / 2;
+    }
+
+
 }

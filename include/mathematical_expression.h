@@ -10,6 +10,7 @@
 #include "BooleanCalculationTwo.h"
 #include "CumulativeCalculation.h"
 #include "FunctionFormulaCalculation.h"
+#include "FastSumOfIntervalsBrackets.h"
 
 #define VERSION "1.0.1.1-mathematical_expression-C++";
 
@@ -25,6 +26,7 @@ protected:
     ME::BooleanCalculationTwo booleanCalculation2;
     ME::CumulativeCalculation cumulativeCalculation;
     ME::FunctionFormulaCalculation functionFormulaCalculation;
+    ME::FastSumOfIntervalsBrackets fastSumOfIntervalsBrackets;
 public:
 
     /**
@@ -77,7 +79,15 @@ public:
      */
     ME::FunctionFormulaCalculation getFunctionFormulaCalculation();
 
+    /**
+     *
+     * @return 快速累加数学表达式计算区间，其可以计算一个等差数列中所有元素的和，使用数学公式定义等差数列的首尾项。
+     *
+     * The fast accumulation mathematical expression calculates the interval, which can calculate the sum of all elements in a Arithmetic progression, and use Formula to define the first and last terms of Arithmetic progression.
+     */
+    ME::FastSumOfIntervalsBrackets getFastSumOfIntervalsBrackets();
 };
 
+ostream &operator<<(ostream &out, mathematical_expression mathematicalExpression);
 
 #endif //MATHEMATICAL_EXPRESSION_CPP_MATHEMATICAL_EXPRESSION_H

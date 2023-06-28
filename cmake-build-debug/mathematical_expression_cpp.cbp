@@ -111,6 +111,9 @@
 		<Unit filename="D:/MyGithub/mathematical-expression-cpp/include/CumulativeCalculation.h">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
+		<Unit filename="D:/MyGithub/mathematical-expression-cpp/include/FastSumOfIntervalsBrackets.h">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
 		<Unit filename="D:/MyGithub/mathematical-expression-cpp/include/FunctionFormulaCalculation.h">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
@@ -127,6 +130,9 @@
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="D:/MyGithub/mathematical-expression-cpp/include/PrefixExpressionOperation.h">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
+		<Unit filename="D:/MyGithub/mathematical-expression-cpp/include/SharedCalculation.h">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="D:/MyGithub/mathematical-expression-cpp/include/Utils.h">
@@ -156,6 +162,9 @@
 		<Unit filename="D:/MyGithub/mathematical-expression-cpp/src/core/calculation/CumulativeCalculation.cpp">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
+		<Unit filename="D:/MyGithub/mathematical-expression-cpp/src/core/calculation/FastSumOfIntervalsBrackets.cpp">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
 		<Unit filename="D:/MyGithub/mathematical-expression-cpp/src/core/calculation/FunctionFormulaCalculation.cpp">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
@@ -166,6 +175,9 @@
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="D:/MyGithub/mathematical-expression-cpp/src/core/calculation/PrefixExpressionOperation.cpp">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
+		<Unit filename="D:/MyGithub/mathematical-expression-cpp/src/core/calculation/SharedCalculation.cpp">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="D:/MyGithub/mathematical-expression-cpp/src/core/container/CalculationResults.cpp">

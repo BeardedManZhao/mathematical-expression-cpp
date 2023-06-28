@@ -67,9 +67,9 @@ namespace ME {
      */
     class CalculationNumberResults : public CalculationResults {
     private:
-        const double result;
-        const int result_layers;
-        const string source;
+        double result;
+        int result_layers;
+        string source;
         string alias;
 
     public:

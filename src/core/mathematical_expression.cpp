@@ -22,3 +22,11 @@ ME::FunctionFormulaCalculation mathematical_expression::getFunctionFormulaCalcul
 ME::CumulativeCalculation mathematical_expression::getCumulativeCalculation() {
     return mathematical_expression::cumulativeCalculation;
 }
+
+ME::FastSumOfIntervalsBrackets mathematical_expression::getFastSumOfIntervalsBrackets() {
+    return mathematical_expression::fastSumOfIntervalsBrackets;
+}
+
+ostream &operator<<(ostream &out, mathematical_expression me) {
+    return cout << mathematical_expression::getVERSION() << " : " << &me << " obj class!!!!";
+}
