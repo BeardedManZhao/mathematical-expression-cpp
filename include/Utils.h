@@ -60,6 +60,21 @@ namespace StrUtils {
      */
     std::string
     replace(const std::string &old_string, const std::string &replace_string, const std::string &new_string);
+
+    /**
+     * 使用起始与终止的指针进行拷贝字符串
+     * @param start 起始的字符串指针
+     * @param end 终止的字符串指针
+     * @return 拷贝成功的字符串数据
+     */
+    std::string copy_str(std::string::const_iterator start, std::string::const_iterator end);
+
+    /**
+     * 去除字符串前后空字符串的函数
+     * @param data 需要被去除空值的字符串
+     * @return 去除成功后返回的新字符串
+     */
+    std::string trim(const std::string &data);
 }
 
 namespace NumberUtils {
@@ -117,6 +132,26 @@ namespace NumberUtils {
      * Whether the left value and right value conform to the comparison operator
      */
     bool ComparisonOperation(const std::string &ComparisonOperator, double left, double right);
+
+    /**
+     * 将区间内的所有数值进行累加
+     *
+     * @param start 区间起始数值
+     * @param end   区间终止数值
+     * @return 区间内所有数值的累加结果
+     */
+    static double sumOfRange(double start, double end);
+
+    /**
+     * 带有步长的方式计算一个区间内所有数值的累加
+     *
+     * @param start 区间起始数值
+     * @param end   区间终止数值
+     * @param step  区间内每一个元素之间的步长
+     * @return 区间内元素之和
+     */
+    double sumOfRange(double start, double end, double step);
+
 }
 
 #endif //MATHEMATICAL_EXPRESSION_CPP_UTILS_H

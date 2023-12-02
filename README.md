@@ -27,7 +27,9 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_executable(MyCpp main.cpp)
 # Link to the project (link the library to the compiled target)
-target_link_libraries(${PROJECT_NAME} D:\\liming\\Project\\Clion\\MyCpp\\cmake-build-debug\\libmathematical_expression_cpp.dll)
+target_link_libraries(
+        ${PROJECT_NAME} D:\\liming\\Project\\Clion\\MyCpp\\cmake-build-debug\\mathematical_expression_cpp_WINx64.dll
+)
 ```
 
 After the integration operation is completed, you can try to enter the following code to determine whether the function
@@ -282,6 +284,50 @@ int main() {
 ```
 Active code page: 65001
 计算层数：1     计算结果：21    计算来源：BracketsCalculation
+
+进程已结束,退出代码0
+```
+
+### Quick interval summation calculation component (based on parenthesis expression)
+
+- Class component: ME:: FastSumOfIntervalsBrackets
+- 介绍
+
+  The new product of version 1.15, the interval fast sum component, is a fast component that sums all elements of an
+  interval with an equal difference of 1. It logically simulates an interval into a mathematical sequence and quickly
+  sums it using a sum formula.
+
+  This component implements the shared pool calculation function, which includes checking, calculating, and recording
+  the previous result, which can accelerate the calculation speed. The specific API calls are as follows.
+
+```c++
+#include "mathematical_expression.h"
+
+int main() {
+    system("chcp 65001");
+    // 获取到数学表达式解析库对象
+    mathematical_expression me;
+    // 获取到区间累加表达式对象
+    ME::FastSumOfIntervalsBrackets fastSumOfIntervalsBrackets = me.getFastSumOfIntervalsBrackets();
+    // 准备需要被计算的数学表达式，这里的数学表达式中有个逗号，逗号两边代表的就是区间的两个边界
+    string f1 = "1 + 10, 20 - (5 + 2)";
+    // 检查数学表达式
+    fastSumOfIntervalsBrackets.check(f1);
+    // 将步长修改为 2
+    fastSumOfIntervalsBrackets.step = 2;
+    // 开始计算 并获取到结果对象
+    ME::CalculationNumberResults r1 = fastSumOfIntervalsBrackets << f1;
+    // 开始进行结果查看
+    cout << "计算层数：" << r1.getResultLayers() << "\t计算结果：" << r1 << "\t计算来源：" << r1.getCalculationSourceName()
+         << endl;
+}
+```
+
+- 运行结果 从上面代码中我们可以看到，快速区间求和计算的公式由被逗号分割的两个括号表达式组成
+
+```
+Active code page: 65001
+计算层数：1     计算结果：24    计算来源：FastSumOfIntervalsBrackets
 
 进程已结束,退出代码0
 ```
