@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\liming\CX\Clion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\liming\CX\Clion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\MyGithub\mathematical-expression-cpp
+CMAKE_SOURCE_DIR = G:\MyGithub\mathematical-expression-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\MyGithub\mathematical-expression-cpp\cmake-build-debug
+CMAKE_BINARY_DIR = G:\MyGithub\mathematical-expression-cpp\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = D:\MyGithub\mathematical-expression-cpp\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"D:\liming\CX\Clion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"D:\liming\CX\Clion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\MyGithub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles D:\MyGithub\mathematical-expression-cpp\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start G:\MyGithub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles G:\MyGithub\mathematical-expression-cpp\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\MyGithub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start G:\MyGithub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -296,6 +296,30 @@ src/core/calculation/CumulativeCalculation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.s
 .PHONY : src/core/calculation/CumulativeCalculation.cpp.s
 
+src/core/calculation/FastSumOfIntervalsBrackets.obj: src/core/calculation/FastSumOfIntervalsBrackets.cpp.obj
+.PHONY : src/core/calculation/FastSumOfIntervalsBrackets.obj
+
+# target to build an object file
+src/core/calculation/FastSumOfIntervalsBrackets.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FastSumOfIntervalsBrackets.cpp.obj
+.PHONY : src/core/calculation/FastSumOfIntervalsBrackets.cpp.obj
+
+src/core/calculation/FastSumOfIntervalsBrackets.i: src/core/calculation/FastSumOfIntervalsBrackets.cpp.i
+.PHONY : src/core/calculation/FastSumOfIntervalsBrackets.i
+
+# target to preprocess a source file
+src/core/calculation/FastSumOfIntervalsBrackets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FastSumOfIntervalsBrackets.cpp.i
+.PHONY : src/core/calculation/FastSumOfIntervalsBrackets.cpp.i
+
+src/core/calculation/FastSumOfIntervalsBrackets.s: src/core/calculation/FastSumOfIntervalsBrackets.cpp.s
+.PHONY : src/core/calculation/FastSumOfIntervalsBrackets.s
+
+# target to generate assembly for a file
+src/core/calculation/FastSumOfIntervalsBrackets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FastSumOfIntervalsBrackets.cpp.s
+.PHONY : src/core/calculation/FastSumOfIntervalsBrackets.cpp.s
+
 src/core/calculation/FunctionFormulaCalculation.obj: src/core/calculation/FunctionFormulaCalculation.cpp.obj
 .PHONY : src/core/calculation/FunctionFormulaCalculation.obj
 
@@ -319,6 +343,30 @@ src/core/calculation/FunctionFormulaCalculation.s: src/core/calculation/Function
 src/core/calculation/FunctionFormulaCalculation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculation.cpp.s
 .PHONY : src/core/calculation/FunctionFormulaCalculation.cpp.s
+
+src/core/calculation/FunctionFormulaCalculationTwo.obj: src/core/calculation/FunctionFormulaCalculationTwo.cpp.obj
+.PHONY : src/core/calculation/FunctionFormulaCalculationTwo.obj
+
+# target to build an object file
+src/core/calculation/FunctionFormulaCalculationTwo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculationTwo.cpp.obj
+.PHONY : src/core/calculation/FunctionFormulaCalculationTwo.cpp.obj
+
+src/core/calculation/FunctionFormulaCalculationTwo.i: src/core/calculation/FunctionFormulaCalculationTwo.cpp.i
+.PHONY : src/core/calculation/FunctionFormulaCalculationTwo.i
+
+# target to preprocess a source file
+src/core/calculation/FunctionFormulaCalculationTwo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculationTwo.cpp.i
+.PHONY : src/core/calculation/FunctionFormulaCalculationTwo.cpp.i
+
+src/core/calculation/FunctionFormulaCalculationTwo.s: src/core/calculation/FunctionFormulaCalculationTwo.cpp.s
+.PHONY : src/core/calculation/FunctionFormulaCalculationTwo.s
+
+# target to generate assembly for a file
+src/core/calculation/FunctionFormulaCalculationTwo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculationTwo.cpp.s
+.PHONY : src/core/calculation/FunctionFormulaCalculationTwo.cpp.s
 
 src/core/calculation/FunctionManager.obj: src/core/calculation/FunctionManager.cpp.obj
 .PHONY : src/core/calculation/FunctionManager.obj
@@ -391,6 +439,30 @@ src/core/calculation/PrefixExpressionOperation.s: src/core/calculation/PrefixExp
 src/core/calculation/PrefixExpressionOperation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/PrefixExpressionOperation.cpp.s
 .PHONY : src/core/calculation/PrefixExpressionOperation.cpp.s
+
+src/core/calculation/SharedCalculation.obj: src/core/calculation/SharedCalculation.cpp.obj
+.PHONY : src/core/calculation/SharedCalculation.obj
+
+# target to build an object file
+src/core/calculation/SharedCalculation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/SharedCalculation.cpp.obj
+.PHONY : src/core/calculation/SharedCalculation.cpp.obj
+
+src/core/calculation/SharedCalculation.i: src/core/calculation/SharedCalculation.cpp.i
+.PHONY : src/core/calculation/SharedCalculation.i
+
+# target to preprocess a source file
+src/core/calculation/SharedCalculation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/SharedCalculation.cpp.i
+.PHONY : src/core/calculation/SharedCalculation.cpp.i
+
+src/core/calculation/SharedCalculation.s: src/core/calculation/SharedCalculation.cpp.s
+.PHONY : src/core/calculation/SharedCalculation.s
+
+# target to generate assembly for a file
+src/core/calculation/SharedCalculation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/SharedCalculation.cpp.s
+.PHONY : src/core/calculation/SharedCalculation.cpp.s
 
 src/core/container/CalculationResults.obj: src/core/container/CalculationResults.cpp.obj
 .PHONY : src/core/container/CalculationResults.obj
@@ -566,9 +638,15 @@ help:
 	@echo ... src/core/calculation/CumulativeCalculation.obj
 	@echo ... src/core/calculation/CumulativeCalculation.i
 	@echo ... src/core/calculation/CumulativeCalculation.s
+	@echo ... src/core/calculation/FastSumOfIntervalsBrackets.obj
+	@echo ... src/core/calculation/FastSumOfIntervalsBrackets.i
+	@echo ... src/core/calculation/FastSumOfIntervalsBrackets.s
 	@echo ... src/core/calculation/FunctionFormulaCalculation.obj
 	@echo ... src/core/calculation/FunctionFormulaCalculation.i
 	@echo ... src/core/calculation/FunctionFormulaCalculation.s
+	@echo ... src/core/calculation/FunctionFormulaCalculationTwo.obj
+	@echo ... src/core/calculation/FunctionFormulaCalculationTwo.i
+	@echo ... src/core/calculation/FunctionFormulaCalculationTwo.s
 	@echo ... src/core/calculation/FunctionManager.obj
 	@echo ... src/core/calculation/FunctionManager.i
 	@echo ... src/core/calculation/FunctionManager.s
@@ -578,6 +656,9 @@ help:
 	@echo ... src/core/calculation/PrefixExpressionOperation.obj
 	@echo ... src/core/calculation/PrefixExpressionOperation.i
 	@echo ... src/core/calculation/PrefixExpressionOperation.s
+	@echo ... src/core/calculation/SharedCalculation.obj
+	@echo ... src/core/calculation/SharedCalculation.i
+	@echo ... src/core/calculation/SharedCalculation.s
 	@echo ... src/core/container/CalculationResults.obj
 	@echo ... src/core/container/CalculationResults.i
 	@echo ... src/core/container/CalculationResults.s
