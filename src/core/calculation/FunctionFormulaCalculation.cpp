@@ -101,9 +101,10 @@ ME::CalculationNumberResults ME::FunctionFormulaCalculation::calculation(std::st
                 auto functionByName = FunctionManager::getFunction(name);
                 // 使用括号计算组件，计算出函数实参，然后通过函数将函数内的公式计算出来
                 unsigned int start_index = start + name.length() + 1;
-                double args = BRACKETS_CALCULATION_2.calculation(Formula.substr(start_index, index - start_index + 2),
-                                                                 formatRequired).getResult();
-                double run = functionByName(&args);
+                ME::MEStack<double> args;
+                args.push(BRACKETS_CALCULATION_2.calculation(Formula.substr(start_index, index - start_index + 2),
+                                                             formatRequired).getResult());
+                double run = functionByName(args);
                 name.clear();
                 // 将当前的函数结果添加到公式缓冲区，这里判断了下run的精度，如果run是一个整数，就直接转换成整数添加
                 int run1 = (int) run;

@@ -10,9 +10,9 @@
 #include "BooleanCalculationTwo.h"
 #include "CumulativeCalculation.h"
 #include "FunctionFormulaCalculation.h"
-#include "FastSumOfIntervalsBrackets.h"
+#include "FunctionFormulaCalculationTwo.h"
 
-#define VERSION "1.0.1.1-mathematical_expression-C++";
+#define VERSION "1.0.2.1-mathematical_expression-C++";
 
 /**
  * 数学表达式解析计算库中的门户类，由该类获取到数学表达式计算库中的相关数据对象。
@@ -26,7 +26,7 @@ protected:
     ME::BooleanCalculationTwo booleanCalculation2;
     ME::CumulativeCalculation cumulativeCalculation;
     ME::FunctionFormulaCalculation functionFormulaCalculation;
-    ME::FastSumOfIntervalsBrackets fastSumOfIntervalsBrackets;
+    ME::FunctionFormulaCalculationTwo functionFormulaCalculation2;
 public:
 
     /**
@@ -81,11 +81,25 @@ public:
 
     /**
      *
-     * @return 快速累加数学表达式计算区间，其可以计算一个等差数列中所有元素的和，使用数学公式定义等差数列的首尾项。
-     *
-     * The fast accumulation mathematical expression calculates the interval, which can calculate the sum of all elements in a Arithmetic progression, and use Formula to define the first and last terms of Arithmetic progression.
-     */
-    ME::FastSumOfIntervalsBrackets getFastSumOfIntervalsBrackets();
+    * @return 函数数学表达式计算组件，该组件能够解析一个引用了函数的表达式，能够有效的实现自定义计算函数的效果。
+    其支持多参函数
+            *
+            *Function
+    mathematical expression
+    calculation component, which
+    can parse
+    an expression
+    that references
+    a function
+    and
+    effectively achieve
+    the effect
+    of custom
+    calculation functions
+    .
+    */
+
+    ME::FunctionFormulaCalculationTwo getFunctionFormulaCalculation2();
 };
 
 ostream &operator<<(ostream &out, mathematical_expression mathematicalExpression);

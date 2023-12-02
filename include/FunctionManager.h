@@ -5,6 +5,7 @@
 #ifndef MATHEMATICAL_EXPRESSION_CPP_FUNCTIONMANAGER_H
 #define MATHEMATICAL_EXPRESSION_CPP_FUNCTIONMANAGER_H
 
+#include "MEStack.h"
 
 namespace ME {
 
@@ -38,8 +39,26 @@ namespace ME {
          * @param check 注册函数的时候是否要进行函数名称冲突的检查，这是一个默认为true的值，如果为 true 代表检查函数名称是否冲突。
          *
          * When registering a function, do you want to check for function name conflicts? This is a default value of true. If true, it means checking for function name conflicts.
+         * @deprecated("此函数不应继续调用，请调用 append(const std::string &name, const std::function<double(ME::MEStack<double>)> &func, bool check = true); 相当于是函数的形参变为了 ME::MEStack<double>")
          */
         static void append(const std::string &name, const std::function<double(double[])> &func, bool check = true);
+
+        /**
+         * 将一个函数添加添加到函数存储池中，相当于是进行的函数注册操作。
+         *
+         * Adding a function to the function storage pool is equivalent to registering a function.
+         * @param name 需要被注册函数的名称。
+         *
+         * The name of the function that needs to be registered.
+         * @param func 需要被注册的函数的实现。
+         *
+         * The implementation of the function that needs to be registered.
+         * @param check 注册函数的时候是否要进行函数名称冲突的检查，这是一个默认为true的值，如果为 true 代表检查函数名称是否冲突。
+         *
+         * When registering a function, do you want to check for function name conflicts? This is a default value of true. If true, it means checking for function name conflicts.
+         */
+        static void
+        append(const std::string &name, const std::function<double(ME::MEStack<double>)> &func, bool check = true);
 
         /**
          * 从函数管理者中获取到指定名称的函数对象。
@@ -52,7 +71,7 @@ namespace ME {
          *
          * Specifies the Function object corresponding to the function name.
          */
-        static std::function<double(double[])> getFunction(const std::string &name);
+        static std::function<double(ME::MEStack<double>)> getFunction(const std::string &name);
 
     };
 }
