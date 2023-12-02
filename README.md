@@ -27,9 +27,7 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_executable(MyCpp main.cpp)
 # Link to the project (link the library to the compiled target)
-target_link_libraries(
-        ${PROJECT_NAME} D:\\liming\\Project\\Clion\\MyCpp\\cmake-build-debug\\mathematical_expression_cpp_WINx64.dll
-)
+target_link_libraries(${PROJECT_NAME} D:\\liming\\Project\\Clion\\MyCpp\\cmake-build-debug\\libmathematical_expression_cpp.dll)
 ```
 
 After the integration operation is completed, you can try to enter the following code to determine whether the function
@@ -288,6 +286,80 @@ Active code page: 65001
 进程已结束,退出代码0
 ```
 
+#### 注意事项
+
+1.0.2 版本中 针对函数的注册操作不能向后兼容，函数的形参有一些小改动，如果是在1.0.2版本以以后的版本 请使用下面的方式注册函数
+
+```
+    // 准备函数 将函数的形参类型 由 double* 更改为 ME::MEStack<double> 即可 因为 ME::MEStack<double> 具有更大的灵活性
+    auto myFun =[](const ME::MEStack<double>& v) {
+    double res = 0;
+    for (int i = 0; i < v.size(); ++i){
+        res += v.get(i);
+    }
+        return res;
+    };
+    // 注册函数 将我们的函数注册成为 DoubleValue 的名称
+    ME::FunctionManager::append("sum", myFun);
+```
+
+### 函数多参数运算表达式
+
+- Multi parameter function operation expression
+- introduce
+
+For some expression calculations that use functions in expressions, the above class can be used for operations. It is an
+upgraded version of the "core. calculation. number. FunctionFormulaCalculation" class, which has appeared since version
+1.1, is also an extended implementation of its subclass.
+
+Compared with the parent class, this component makes up for the deficiency that the parent class can only parse the
+function expression with one parameter. In this component, you can use many real parameters for function operations,
+such as sum (1,2,3)
+
+This type of function is a multiparameter function. Next, let's look at the API usage example, in which the calculation
+and results of the multiparameter function expression are shown.
+
+- API Usage Example
+
+```c++
+#include <mathematical_expression.h>
+#include "FunctionManager.h"
+int main() {
+    system("chcp 65001");
+    // 准备函数 这里的函数的作用是将 3 个参数求和
+    auto myFun = [](const ME::MEStack<double>& v) {
+        double res = 0;
+        for (int i = 0; i < v.size(); ++i){
+            res += v.get(i);
+        }
+        return res;
+    };
+    // 注册函数 将我们的函数注册成为 DoubleValue 的名称
+    ME::FunctionManager::append("sum", myFun);
+    // 构建一个数学表达式，表达式中使用到了函数 DoubleValue
+    string s = "2 * sum(2 + 3, 1 + 20, 10 + (1 - 2)) + 1";
+    // 获取到 数学表达式解析库
+    mathematical_expression me;
+    // 获取到函数表达式计算组件
+    auto functionFormulaCalculation = me.getFunctionFormulaCalculation2();
+    // 检查数学表达式
+    functionFormulaCalculation.check(s);
+    // 计算出结果
+    ME::CalculationNumberResults results = functionFormulaCalculation << s;
+    // 将结果打印出来
+    cout << "计算层数：" << results.getResultLayers() << "\t计算结果：" << results << "\t计算来源：" << results.getCalculationSourceName() << endl;
+}
+```
+
+- 运行结果
+
+```
+Active code page: 65001
+计算层数：1     计算结果：71    计算来源：BracketsCalculation
+
+进程已结束,退出代码0
+```
+
 ### Quick interval summation calculation component (based on parenthesis expression)
 
 - Class component: ME:: FastSumOfIntervalsBrackets
@@ -323,7 +395,10 @@ int main() {
 }
 ```
 
-- 运行结果 从上面代码中我们可以看到，快速区间求和计算的公式由被逗号分割的两个括号表达式组成
+- 运行结果
+
+From the above code, we can see that the formula for fast interval summation is composed of two parentheses separated by
+commas.
 
 ```
 Active code page: 65001

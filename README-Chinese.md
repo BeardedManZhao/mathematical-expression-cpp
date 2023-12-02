@@ -19,13 +19,10 @@ project(MyCpp)
 set(CMAKE_CXX_STANDARD 14)
 
 # 设置头文件目录（可以自定义）
-include_directories(${PROJECT_SOURCE_DIR}/include)
-# 设置库文件目录
+include_directories(${PROJECT_SOURCE_DIR}/head)
 add_executable(MyCpp main.cpp)
 # 与项目进行链接（将库链接到编译之后的目标中）
-target_link_libraries(
-        ${PROJECT_NAME} D:\\liming\\Project\\Clion\\MyCpp\\cmake-build-debug\\mathematical_expression_cpp_WINx64.dll
-)
+target_link_libraries(${PROJECT_NAME} D:\\liming\\Project\\Clion\\MyCpp\\cmake-build-debug\\mathematical_expression_cpp.dll)
 ```
 
 集成操作完毕之后，您可以尝试输入以下代码来判断库的功能是否正常，下面是该库的一个测试代码，如果其运行之后的程序main函数返回值为0
@@ -262,6 +259,74 @@ int main() {
 ```
 Active code page: 65001
 计算层数：1     计算结果：21    计算来源：BracketsCalculation
+
+进程已结束,退出代码0
+```
+
+#### 注意事项
+
+1.0.2 版本中 针对函数的注册操作不能向后兼容，如果是在1.0.2版本以以后的版本 请使用下面的方式注册函数
+
+```c++
+    // 准备函数 将函数的形参类型 由 double* 更改为 ME::MEStack<double> 即可 因为 ME::MEStack<double> 具有更大的灵活性
+auto myFun =[](const ME::MEStack<double>& v) {
+double res = 0;
+for (int i = 0; i < v.size(); ++i){
+res += v.get(i);
+}
+return res;
+};
+// 注册函数 将我们的函数注册成为 DoubleValue 的名称
+ME::FunctionManager::append("sum", myFun);
+```
+
+### 函数多参数运算表达式
+
+- 类组件：ME::FunctionFormulaCalculationTwo
+- 介绍
+
+针对一些在表达式中使用了函数的表达式计算，可以使用上面的类进行操作，它是“core.calculation.number.FunctionFormulaCalculation”类的升级版，从1.0.2版本开始出现，同时也是它的一个子类拓展实现。
+
+相较于父类，本组件弥补了父类只能解析带有一个参数函数表达式的不足，在该组件中，可以使用很多的实参进行函数的运算，例如sum(
+1,2,3) 这类函数，就是一个多参函数，接下来请看API的使用示例，在此示例中，展示了多惨函数表达式的计算与结果。
+
+- API使用示例
+
+```c++
+#include <mathematical_expression.h>
+#include "FunctionManager.h"
+int main() {
+    system("chcp 65001");
+    // 准备函数 这里的函数的作用是将 3 个参数求和
+    auto myFun = [](const ME::MEStack<double>& v) {
+        double res = 0;
+        for (int i = 0; i < v.size(); ++i){
+            res += v.get(i);
+        }
+        return res;
+    };
+    // 注册函数 将我们的函数注册成为 DoubleValue 的名称
+    ME::FunctionManager::append("sum", myFun);
+    // 构建一个数学表达式，表达式中使用到了函数 DoubleValue
+    string s = "2 * sum(2 + 3, 1 + 20, 10 + (1 - 2)) + 1";
+    // 获取到 数学表达式解析库
+    mathematical_expression me;
+    // 获取到函数表达式计算组件
+    auto functionFormulaCalculation = me.getFunctionFormulaCalculation2();
+    // 检查数学表达式
+    functionFormulaCalculation.check(s);
+    // 计算出结果
+    ME::CalculationNumberResults results = functionFormulaCalculation << s;
+    // 将结果打印出来
+    cout << "计算层数：" << results.getResultLayers() << "\t计算结果：" << results << "\t计算来源：" << results.getCalculationSourceName() << endl;
+}
+```
+
+- 运行结果
+
+```
+Active code page: 65001
+计算层数：1     计算结果：71    计算来源：BracketsCalculation
 
 进程已结束,退出代码0
 ```
