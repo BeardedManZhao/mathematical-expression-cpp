@@ -22,3 +22,7 @@ ME::FunctionFormulaCalculation mathematical_expression::getFunctionFormulaCalcul
 ME::CumulativeCalculation mathematical_expression::getCumulativeCalculation() {
     return mathematical_expression::cumulativeCalculation;
 }
+
+ME::FunctionFormulaCalculationTwo mathematical_expression::getFunctionFormulaCalculation2() {
+    return mathematical_expression::functionFormulaCalculation2;
+}

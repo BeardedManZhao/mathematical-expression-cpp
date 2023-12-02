@@ -138,4 +138,45 @@ namespace StrUtils {
         }
         return res;
     }
+
+    /**
+     * 使用起始与终止的指针进行拷贝字符串
+     * @param start 起始的字符串指针
+     * @param end 终止的字符串指针
+     * @return 拷贝成功的字符串数据
+     */
+    std::string copy_str(std::string::const_iterator start, std::string::const_iterator end) {
+        std::string buffer;
+        while (start != end) {
+            buffer.push_back(*(start++));
+        }
+        return buffer;
+    }
+
+    /**
+     * 去除字符串前后空字符串的函数
+     * @param data 需要被去除空值的字符串
+     * @return 去除成功后返回的新字符串
+     */
+    std::string trim(const std::string &data) {
+        // 获取到尾部指针
+        std::string::const_iterator start = data.begin();
+        std::string::const_iterator end = data.end();
+        while (start != end && *start == ' ') {
+            // 移动头部的指针，去除前面的空格
+            ++start;
+        }
+        // 判断是否需要进行后向前的判断
+        if (start == end) {
+            // 不需要判断了，直接返回数值
+            return "";
+        }
+        // 需要判断就继续迭代
+        while (end != start && *end == ' ') {
+            --end;
+        }
+        return copy_str(start, end);
+    }
+
+
 }

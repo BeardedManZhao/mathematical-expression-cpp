@@ -8,9 +8,10 @@
 #include "FunctionManager.h"
 #include "MExceptional.h"
 
-std::unordered_map<std::string, const std::function<double(double[])>> functions;
+std::unordered_map<std::string, const std::function<double(ME::MEStack<double>)>> functions;
 
-void ME::FunctionManager::append(const std::string &name, const std::function<double(double [])> &func, bool check) {
+void ME::FunctionManager::append(const std::string &name, const std::function<double(ME::MEStack<double>)> &func,
+                                 bool check) {
     auto f = functions.find(name);
     if (check && f != functions.end()) {
         // 代表已经存在
@@ -26,6 +27,11 @@ bool ME::FunctionManager::contain(const std::string &name) {
     return functions.find(name) != functions.end();
 }
 
-std::function<double(double[])> ME::FunctionManager::getFunction(const std::string &name) {
+std::function<double(ME::MEStack<double>)> ME::FunctionManager::getFunction(const std::string &name) {
     return functions.at(name);
+}
+
+void ME::FunctionManager::append(const std::string &name, const std::function<double(double *)> &func, bool check) {
+    throw AbnormalOperation(
+            "从 1.0.2 版本开始 您注册函数的时候，请将函数的形参类型 从 double* 更换为 ME::MEStack<double>，新的形参具有更多的操作可以使用，非常方便！\nStarting from version 1.0.2, when registering functions, please change the parameter type of the function from double * to ME:: MEStack<double>. The new parameter has more operations to use, which is very convenient!");
 }
