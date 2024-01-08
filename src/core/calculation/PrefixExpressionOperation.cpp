@@ -63,8 +63,11 @@ namespace ME {
         ME::MEStack<char> characterStack;
         // 开始格式化，将符号与操作数进行分类
         std::string stringBuilder;
+        // 创建标记点 标记上一个是否是操作符
+        bool backIsOpt = true;
         for (const auto &c: newFormula) {
-            if (StrUtils::IsAnOperator(c)) {
+            if (!backIsOpt && StrUtils::IsAnOperator(c)) {
+                backIsOpt = true;
                 // 如果是操作符，就先将上一个数值计算出来
                 double number = StrUtils::stringToDouble(stringBuilder);
                 if (characterStack.empty()) {
@@ -91,9 +94,10 @@ namespace ME {
                 }
                 // 清理所有的字符缓冲
                 stringBuilder.clear();
-            } else if (c == DECIMAL_POINT || StrUtils::IsANumber(c)) {
+            } else if (c == DECIMAL_POINT || c == MINUS_SIGN || StrUtils::IsANumber(c)) {
                 // 如果是数值的某一位，就将数值存储到变量中
                 stringBuilder += c;
+                backIsOpt = false;
             }
         }
         doubleStack.push(StrUtils::stringToDouble(stringBuilder));

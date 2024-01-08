@@ -28,6 +28,13 @@ namespace StrUtils {
     bool IsAnOperator(char c);
 
     /**
+     * 将一个 ascii 数值转换成为字符串
+     * @param ascii 需要被转换的 ascii 数值
+     * @return 转换操作成功之后的字符串
+     */
+    std::string asciiToChar(int ascii);
+
+    /**
      * 将一个字符串转换为浮点数值
      *
      * @param s 需要被转换的字符串

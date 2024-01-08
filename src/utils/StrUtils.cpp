@@ -30,6 +30,15 @@ namespace StrUtils {
     }
 
     /**
+     * 将一个 ascii 数值转换成为字符串
+     * @param ascii 需要被转换的 ascii 数值
+     * @return 转换操作成功之后的字符串
+     */
+    std::string asciiToChar(int ascii) {
+        return {char(ascii)};
+    }
+
+    /**
      * 将一个数值字符传换成一个数值
      *
      * @param c 需要被转换的字符
@@ -37,11 +46,14 @@ namespace StrUtils {
      */
     int charToInteger(char c) {
         if (StrUtils::IsANumber(c)) {
-            return c - 0x30;
+            return c - 48;
         } else {
-            std::string data = &"您在进行字符与数值之间的转换时，由于字符的不正确导致无法成功转换，错误字符："[c];
-            throw ME::MExceptional(data.append(
-                    &"\nWhen you are converting characters to numeric values, the conversion cannot be successful due to incorrect characters. Error characters:"[c]));
+            std::string temp_ex_data = "您在进行字符与数值之间的转换时，由于字符的不正确导致无法成功转换";
+            std::string temp_res = asciiToChar(c);
+            temp_ex_data.append(
+                            "\nWhen you are converting characters to numeric values, the conversion cannot be successful due to incorrect characters.")
+                    .append(temp_res);
+            throw ME::WrongFormat(temp_ex_data);
         }
     }
 
@@ -58,6 +70,16 @@ namespace StrUtils {
         int floatSize = 0;
         bool isInt = true;
         unsigned long long length = s.length();
+        if (length <= 0) {
+            throw ME::WrongFormat(
+                    "您在调用 stringToDouble 函数的时候 不能传递空字符串！\nYou cannot pass an empty string when calling the stringToDouble function!");
+        }
+        // 判断是否为负数
+        bool isF = s[0] == MINUS_SIGN;
+        if (isF) {
+            s = s.substr(1);
+            length -= 1;
+        }
         for (int i = 0; i < length; i++) {
             char c = s[i];
             if (c != DECIMAL_POINT && c != EMPTY) {
@@ -87,7 +109,7 @@ namespace StrUtils {
         // 计算出来数值本身
         const double res = intRes + floatRes / (double) NumberUtils::PowerOfTen(10, floatSize);
         // 判断是否为负数，如果不是负数直接返回值
-        return s[0] == MINUS_SIGN ? -res : res;
+        return isF ? -res : res;
     }
 
     std::vector<std::string> splitByChar(const std::string &data, char splitChar) {
