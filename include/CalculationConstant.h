@@ -6,6 +6,7 @@
 #define MATHEMATICAL_EXPRESSION_CPP_CALCULATIONCONSTANT_H
 
 #include "BracketsCalculationTwo.h"
+#include "FunctionFormulaCalculationTwo.h"
 
 namespace ME {
     /**
@@ -23,6 +24,15 @@ namespace ME {
          * A globally unique nested parenthesis expression is used to calculate components. Due to the fact that many calculation components rely on this library for calculation, a globally unique nested parenthesis expression is used to achieve memory savings.
          */
         static BracketsCalculationTwo getBracketsCalculationTwo();
+
+        /**
+           *
+           * @return 全局唯一的函数表达式计算组件，由于在库的内部，很多的计算组件依赖此库进行计算，因此使用一个全局的函数表达式来实现内存节约的效果。
+           *
+           * A globally unique function expression calculation component is used to achieve memory savings, as many calculation components within the library rely on this library for computation.
+           *
+           */
+        static FunctionFormulaCalculationTwo getFunctionFormulaCalculationTwo();
     };
 }
 

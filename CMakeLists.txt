@@ -25,5 +25,8 @@ add_library(
         src/core/calculation/FunctionFormulaCalculationTwo.cpp include/FunctionFormulaCalculationTwo.h
         src/core/calculation/CalculationConstant.cpp include/CalculationConstant.h
         src/core/calculation/CumulativeCalculation.cpp include/CumulativeCalculation.h
-        src/core/calculation/FastSumOfIntervalsBrackets.cpp include/FastSumOfIntervalsBrackets.h src/core/calculation/SharedCalculation.cpp include/SharedCalculation.h)
+        src/core/calculation/FastSumOfIntervalsBrackets.cpp include/FastSumOfIntervalsBrackets.h
+        src/core/calculation/SharedCalculation.cpp include/SharedCalculation.h
+        src/core/calculation/ExpressionFunction.cpp include/ExpressionFunction.h
+)
 

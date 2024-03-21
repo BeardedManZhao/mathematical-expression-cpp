@@ -11,10 +11,10 @@
 				<Option working_dir="G:/MyGithub/mathematical-expression-cpp/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mathematical_expression_cpp">
@@ -25,19 +25,19 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="G:/MyGithub/mathematical-expression-cpp/include"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 mathematical_expression_cpp"/>
-					<CompileFile command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 mathematical_expression_cpp"/>
+					<CompileFile command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mathematical_expression_cpp/fast">
@@ -48,39 +48,39 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="G:/MyGithub/mathematical-expression-cpp/include"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
-					<Add directory="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 mathematical_expression_cpp/fast"/>
-					<CompileFile command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 mathematical_expression_cpp/fast"/>
+					<CompileFile command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="G:/MyGithub/mathematical-expression-cpp/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="G:/MyGithub/mathematical-expression-cpp/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Liming/MyApplication/CLion/CLion 2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Liming/MyApplication/CLion/CLion_2022.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;G:/MyGithub/mathematical-expression-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -109,6 +109,9 @@
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="G:/MyGithub/mathematical-expression-cpp/include/CumulativeCalculation.h">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
+		<Unit filename="G:/MyGithub/mathematical-expression-cpp/include/ExpressionFunction.h">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="G:/MyGithub/mathematical-expression-cpp/include/FastSumOfIntervalsBrackets.h">
@@ -163,6 +166,9 @@
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="G:/MyGithub/mathematical-expression-cpp/src/core/calculation/CumulativeCalculation.cpp">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
+		<Unit filename="G:/MyGithub/mathematical-expression-cpp/src/core/calculation/ExpressionFunction.cpp">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
 		<Unit filename="G:/MyGithub/mathematical-expression-cpp/src/core/calculation/FastSumOfIntervalsBrackets.cpp">

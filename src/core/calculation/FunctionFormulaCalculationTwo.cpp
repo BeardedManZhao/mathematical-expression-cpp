@@ -126,6 +126,9 @@ void ME::FunctionFormulaCalculationTwo::check(std::string string) {
     int size1 = start.size();
     int size2 = end.size();
     if (size1 == size2 && size1 == names.size()) {
+        if (size1 == 0) {
+            return;
+        }
         // 如果一致，就进行函数内部每一个公式的检查 这里首先将函数中的每一个公式切割出来
         int startIndex = start.pop_get();
         for (const std::string &s: StrUtils::splitByChar(string.substr(startIndex, end.pop_get() - startIndex - 1),

@@ -30,12 +30,13 @@ namespace ME {
         std::ostream &operator<<(std::ostream &out, const MEStack<std::string> &meStack);
 
     public:
+
         /**
          * 将栈中指定索引处的元素获取到，同时不影响栈中所有的元素
          * @param index 需要获取的元素的位置
          * @return 元素的具体数值
          */
-        T get(int index) const;
+        T get(size_t index) const;
 
         /**
          * 将栈中的栈顶元素直接取出，此操作将会删除栈顶元素，并将栈顶元素获取到。
@@ -45,7 +46,7 @@ namespace ME {
     };
 
     template<typename T>
-    T MEStack<T>::get(int index) const {
+    T MEStack<T>::get(size_t index) const {
         return this->c[index];
     }
 
@@ -55,6 +56,7 @@ namespace ME {
         this->pop();
         return v;
     }
+
 
 } // ME
 

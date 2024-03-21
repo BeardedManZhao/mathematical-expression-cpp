@@ -6,6 +6,14 @@
 
 static ME::BracketsCalculationTwo bracketsCalculationTwo;
 
+struct ME::FunctionFormulaCalculationTwo formulaCalculationTwo;
+
 ME::BracketsCalculationTwo ME::CalculationConstant::getBracketsCalculationTwo() {
     return bracketsCalculationTwo;
 }
+
+ME::FunctionFormulaCalculationTwo ME::CalculationConstant::getFunctionFormulaCalculationTwo() {
+    return formulaCalculationTwo;
+}
+
+

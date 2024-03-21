@@ -20,6 +20,15 @@ namespace StrUtils {
     bool IsANumber(char num_str);
 
     /**
+     * 判断一个字符串是不是一个数值
+     *
+     * @param c 需要被判断的自读
+     * @return 如果是一个数值，这里返回True
+     */
+    bool IsANumberFromStr(const std::string &num_str);
+
+
+    /**
      * 判断一个字符是不是一个操作符
      *
      * @param c 需要被判断的字符
@@ -82,6 +91,15 @@ namespace StrUtils {
      * @return 去除成功后返回的新字符串
      */
     std::string trim(const std::string &data);
+
+    /**
+     * 根据首尾指针创建字符串对象
+     * @tparam Iter 首位指针的迭代器
+     * @param begin 首指针
+     * @param end  尾指针
+     * @return  字符串对象
+     */
+    std::string create_string_from_iterators(std::string::const_iterator begin, std::string::const_iterator end);
 }
 
 namespace NumberUtils {

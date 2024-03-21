@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "G:/MyGithub/mathematical-expression-cpp/src/core/calculation/Calculation.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Calculation.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Calculation.cpp.obj.d"
   "G:/MyGithub/mathematical-expression-cpp/src/core/calculation/CalculationConstant.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.obj.d"
   "G:/MyGithub/mathematical-expression-cpp/src/core/calculation/CumulativeCalculation.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.obj.d"
+  "G:/MyGithub/mathematical-expression-cpp/src/core/calculation/ExpressionFunction.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/ExpressionFunction.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/ExpressionFunction.cpp.obj.d"
   "G:/MyGithub/mathematical-expression-cpp/src/core/calculation/FastSumOfIntervalsBrackets.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FastSumOfIntervalsBrackets.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FastSumOfIntervalsBrackets.cpp.obj.d"
   "G:/MyGithub/mathematical-expression-cpp/src/core/calculation/FunctionFormulaCalculation.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculation.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculation.cpp.obj.d"
   "G:/MyGithub/mathematical-expression-cpp/src/core/calculation/FunctionFormulaCalculationTwo.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculationTwo.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculationTwo.cpp.obj.d"
@@ -30,8 +31,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "G:/MyGithub/mathematical-expression-cpp/src/utils/StrUtils.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/utils/StrUtils.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/utils/StrUtils.cpp.obj.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

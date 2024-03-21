@@ -27,7 +27,8 @@ namespace ME {
 
         string getName() override;
 
-        virtual /**
+        virtual
+        /**
          * 计算一个数学表达式，并将计算细节与计算结果存储到数值结果集中。
          * <p>
          * Compute a mathematical expression and store the calculation details and results in the numerical result set.

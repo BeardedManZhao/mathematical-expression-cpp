@@ -200,5 +200,16 @@ namespace StrUtils {
         return copy_str(start, end);
     }
 
+    // 函数接受一个字符串的引用和一对迭代器，返回从这对迭代器中构造的新字符串
+    std::string create_string_from_iterators(std::string::const_iterator begin, std::string::const_iterator end) {
+        return {
+                begin, end
+        }; // 使用迭代器范围构造新字符串
+    }
+
+    bool IsANumberFromStr(const std::string &num_str) {
+        return std::all_of(num_str.begin(), num_str.end(), [](char c) { return std::isdigit(c); });
+    }
+
 
 }

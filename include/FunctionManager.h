@@ -27,6 +27,21 @@ namespace ME {
         static bool contain(const std::string &name);
 
         /**
+         * 注册一个函数到函数库中，使得所有需要使用函数计算的组件都可以获取到函数对象的数据类型。
+         * <p>
+         * Register a function into the function library, so that all components that need to use the function calculation can obtain the data type of the function object.
+         *
+         * @param function 函数的表达式，您可以使用数学中的格式来定义一个函数，例如 f(x) = 2 * x
+         *                 <p>
+         *                 The expression of a function, you can use mathematical formats to define a function, such as f (x)=2 * x
+         * @return 如果返回true 则代表函数注册操作成功!!!
+         * <p>
+         * If true is returned, the function registration operation is successful!!!
+         * @throws WrongFormat 函数的格式发生错误则会抛出此异常
+         */
+        static void append(const std::string &fun);
+
+        /**
          * 将一个函数添加添加到函数存储池中，相当于是进行的函数注册操作。
          *
          * Adding a function to the function storage pool is equivalent to registering a function.

@@ -407,6 +407,46 @@ Active code page: 65001
 进程已结束,退出代码0
 ```
 
+### Registration and use of mathematical function expressions
+
+```c++
+#include <mathematical_expression.h>
+#include "FunctionManager.h"
+#include "ExpressionFunction.h"
+#include "MEStack.h"
+
+int main() {
+    system("chcp 65001");
+    // 这里的函数的作用是将 3 个参数求和
+    // 注册函数 将我们的函数注册成为 DoubleValue 的名称
+    ME::FunctionManager::append("sum(a,b,c) = a + b + c");
+    // 构建一个数学表达式，表达式中使用到了函数 DoubleValue
+    string s = "2 * sum(2 + 3, 1 + 20, 10 + (1 - 2)) + 1";
+
+    // 获取到 数学表达式解析库
+    mathematical_expression me;
+    cout << "开始计算" << endl;
+
+    // 获取到函数表达式计算组件
+    auto functionFormulaCalculation = me.getFunctionFormulaCalculation2();
+    // 检查数学表达式
+    functionFormulaCalculation.check(s);
+    // 计算出结果
+    ME::CalculationNumberResults results = functionFormulaCalculation << s;
+    // 将结果打印出来
+    cout << "计算层数：" << results.getResultLayers() << "\t计算结果：" << results << "\t计算来源："
+         << results.getCalculationSourceName() << endl;
+
+    // 也可以手动获取到函数对象
+    auto f = ME::FunctionManager::getFunction("sum");
+    ME::MEStack<double> meStack;
+    meStack.push(1);
+    meStack.push(2);
+    meStack.push(3);
+    cout << f(meStack) << endl;
+}
+```
+
 ## C++API characteristic
 
 In C++, libraries have faster parsing and computation speeds, while also having larger functionalities. Next, we will
