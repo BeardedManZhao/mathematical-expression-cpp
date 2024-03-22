@@ -8,9 +8,10 @@
 如果您是一位 Java 或 python爱好者，可以专门前往 [JavaAPI](https://github.com/BeardedManZhao/mathematical-expression.git)
 或 [PythonAPI](https://github.com/BeardedManZhao/mathematical-expression-Py) 中进行相关资料的查阅。
 
-### 如何使用库？
+### 如何在 Windows 中使用库？
 
-在项目中有一个 include 文件目录，其中存储的就是库需要的所有头文件，您可以将其中的库文件导入到您的项目中，然后再集成本框架编译好的dll，下面是cmake的配置文件实例。
+我们已经预编译好了 Windows 版本的DLL，在项目中有一个 include
+文件目录，其中存储的就是库需要的所有头文件，您可以将其中的库文件导入到您的项目中，然后再集成本框架编译好的dll，下面是cmake的配置文件实例。
 
 ```cmake
 cmake_minimum_required(VERSION 3.23)
@@ -37,6 +38,13 @@ int main(){
     cout << mathematical_expression::getVERSION() << endl;
 }
 ```
+
+### 如何在 Linux 中使用库？
+
+针对 Linux 系统的多样性，我们难以提供一种符合大部分系统架构的 dll
+库文件，但是您无需担心，此库没有任何的第三方依赖，仅仅运行于本地库中，这对于它的源码编译工作来说是一个好消息，您可以访问我们写好的[《在 Linux 环境中编译 C++ 源码》](https://www.lingyuzhao.top/?/linkController=/articleController&link=76874815)
+，根据文章的引导来进行编译工作。
+当然，您也可以通过扫描二维码来阅读文章，这对于一些操作会更加简单。
 
 ### 通过 mathematical-expression 库直接获取到计算组件并进行计算
 

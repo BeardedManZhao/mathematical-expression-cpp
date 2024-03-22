@@ -11,7 +11,7 @@ If you are a Java or Python enthusiast, you can specifically
 visit [JavaAPI](https://github.com/BeardedManZhao/mathematical-expression.git)
 Or [Python API](https://github.com/BeardedManZhao/mathematical-expression-Py) Search for relevant information in.
 
-### How to use the library?
+### How to use libraries in Windows?
 
 There is an include file directory in the project, where all the Header file required by the library are stored. You can
 import the library files into your project, and then assemble the dll compiled by this framework. The following is an
@@ -43,6 +43,18 @@ int main(){
     cout << mathematical_expression::getVERSION() << endl;
 }
 ```
+
+### How to Use Libraries in Linux?
+
+Given the diversity of Linux systems, it's challenging to provide a DLL-style library file that caters to most system
+architectures. However, there's no need to worry, as this library has zero third-party dependencies and runs solely
+within local libraries. This characteristic makes compiling its source code relatively straightforward. You can refer to
+our prepared
+guide [《Compiling C++ Source Code in a Linux Environment》](https://www.lingyuzhao.top/?/linkController=/articleController&link=76874815)
+to carry out the compilation process according to the instructions provided in the article.
+
+Of course, you also have the option to read the article by scanning a QR code, which might simplify the process for
+certain operations.
 
 ### Obtain calculation components directly through the mathematical expression library and perform calculations
 
