@@ -34,7 +34,7 @@ void ME::FunctionManager::append(const std::string &name, const std::function<do
 }
 
 bool ME::FunctionManager::contain(const std::string &name) {
-    return functions.find(name) != functions.end() && e_functions.find(name) != e_functions.end();
+    return functions.find(name) != functions.end() || e_functions.find(name) != e_functions.end();
 }
 
 std::function<double(ME::MEStack<double>)> ME::FunctionManager::getFunction(const std::string &name) {
