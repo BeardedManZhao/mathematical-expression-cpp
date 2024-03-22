@@ -45,6 +45,7 @@ int main(){
 库文件，但是您无需担心，此库没有任何的第三方依赖，仅仅运行于本地库中，这对于它的源码编译工作来说是一个好消息，您可以访问我们写好的[《在 Linux 环境中编译 C++ 源码》](https://www.lingyuzhao.top/?/linkController=/articleController&link=76874815)
 ，根据文章的引导来进行编译工作。
 当然，您也可以通过扫描二维码来阅读文章，这对于一些操作会更加简单。
+![image](https://github.com/BeardedManZhao/mathematical-expression-cpp/assets/113756063/4f388121-28eb-4fa8-8e20-14b4d5053158)
 
 ### 通过 mathematical-expression 库直接获取到计算组件并进行计算
 
