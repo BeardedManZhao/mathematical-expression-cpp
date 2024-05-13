@@ -31,12 +31,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "G:/MyGithub/mathematical-expression-cpp/src/utils/StrUtils.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/utils/StrUtils.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/utils/StrUtils.cpp.obj.d"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
-  )
-
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

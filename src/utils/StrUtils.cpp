@@ -24,9 +24,17 @@ namespace StrUtils {
      * @return 如果是一个操作符就返回True
      */
     bool IsAnOperator(char c) {
-        return c == PLUS_SIGN || c == MINUS_SIGN ||
-               c == MULTIPLICATION_SIGN || c == DIVISION_SIGN ||
-               c == REMAINDER_SIGN;
+        switch (c) {
+            case PLUS_SIGN:
+            case MINUS_SIGN:
+            case MULTIPLICATION_SIGN:
+            case DIVISION_SIGN:
+            case REMAINDER_SIGN:
+            case POW_SIGN:
+                return true;
+            default:
+                return false;
+        }
     }
 
     /**

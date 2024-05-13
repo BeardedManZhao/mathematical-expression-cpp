@@ -23,6 +23,7 @@ const char MINUS_SIGN = '-';
 const char MULTIPLICATION_SIGN = '*';
 const char DIVISION_SIGN = '/';
 const char REMAINDER_SIGN = '%';
+const char POW_SIGN = '^';
 const char COMMA = ',';
 const std::string GREATER_THAN_SIGN = ">";
 const std::string LESS_THAN_SIGN = "<";

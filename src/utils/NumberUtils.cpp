@@ -68,8 +68,21 @@ namespace NumberUtils {
      * @return s1操作符的优先级 是否小于 s2操作符的优先级
      */
     bool PriorityComparison(char s1, char s2) {
-        return (s1 == PLUS_SIGN || s1 == MINUS_SIGN) &&
-               (s2 == MULTIPLICATION_SIGN || s2 == DIVISION_SIGN || s2 == REMAINDER_SIGN);
+        switch (s1) {
+            case PLUS_SIGN:
+            case MINUS_SIGN:
+                switch (s2) {
+                    case MULTIPLICATION_SIGN:
+                    case DIVISION_SIGN:
+                    case REMAINDER_SIGN:
+                    case POW_SIGN:
+                        return true;
+                    default:
+                        return false;
+                }
+            default:
+                return false;
+        }
     }
 
     /**
@@ -80,7 +93,6 @@ namespace NumberUtils {
      * @param bn              运算数值2
      * @return 运算结果
      */
-
     double calculation(char CalculationType, double an, double bn) {
         switch (CalculationType) {
             case PLUS_SIGN:
@@ -93,6 +105,8 @@ namespace NumberUtils {
                 return an / bn;
             case REMAINDER_SIGN:
                 return fmod(an, bn);
+            case POW_SIGN:
+                return pow(an, bn);
             default:
                 std::string data = &"操作数计算异常，您的计算模式不存在，错误的计算模式 = ["[CalculationType];
                 throw ME::AbnormalOperation(data.append(+"]\n").append(
