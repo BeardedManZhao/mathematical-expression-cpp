@@ -54,7 +54,8 @@ guide [《Compiling C++ Source Code in a Linux Environment》](https://www.lingy
 to carry out the compilation process according to the instructions provided in the article.
 
 Of course, you also have the option to read the article by scanning a QR code, which might simplify the process for
-certain operations. ![image](https://github.com/BeardedManZhao/mathematical-expression-cpp/assets/113756063/4f388121-28eb-4fa8-8e20-14b4d5053158)
+certain
+operations. ![image](https://github.com/BeardedManZhao/mathematical-expression-cpp/assets/113756063/4f388121-28eb-4fa8-8e20-14b4d5053158)
 
 ### Obtain calculation components directly through the mathematical expression library and perform calculations
 
@@ -130,7 +131,7 @@ int main(){
   stack.
 
 - API usage examples
-  The operators supported by this component are: a+b a-b a * b a/b a% b
+  The operators supported by this component are: `a+b` `a-b` `a*b` `a/b` `a%b` `a^b`
 
 ```c++
 #include "mathematical_expression.h"
